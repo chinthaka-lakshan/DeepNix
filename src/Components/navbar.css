@@ -1,0 +1,41 @@
+.navigation-bar-company-name
+{
+    font-family: 'Rushblade Demo';
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 5.5rem;
+    color: rgb(0, 217, 255);
+}
+
+.navigation-bar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navigation-bar-buttons
+{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.navigation-bar-buttons button
+{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navigation-bar-buttons button.active
+{
+    color: rgb(0, 217, 255);
+}
