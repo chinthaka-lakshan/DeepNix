@@ -1,7 +1,9 @@
 import React from 'react';
 import './Members.css';
 import Navbar from '../../Components/Navbar'; // Ensure correct import path
-import Logo from '../../Assets/person.png'; // Ensure correct path
+import image from '../../Assets/person.png'; // Ensure correct path
+import logoImage from '../../Components/Logo/Logo'; // Watermark image path
+import Logo from '../../Components/Logo/Logo';
 
 const teamMembers = [
   { id: 1, name: 'M.J.C.D. Lakshan', role: 'Web Developer', description: 'Experienced in full-stack web development.' },
@@ -27,11 +29,16 @@ export default function Members() {
       {/* Navbar */}
       <Navbar />
 
+      {/* Watermark Background */}
+      <div className="watermark">
+        <Logo/>
+      </div>
+
       {/* Members Section */}
       <div className="members-grid">
         {teamMembers.map((member) => (
           <div key={member.id} className="member-card">
-            <img src={Logo} alt={member.name} className="member-avatar" />
+            <img src={image} alt={member.name} className="member-avatar" />
             <h3 className="member-name">{member.name}</h3>
             <p className="member-role"><strong>{member.role}</strong></p>
             <p className="member-description">{member.description}</p>
