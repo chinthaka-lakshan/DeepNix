@@ -1,11 +1,8 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-
-
 import './App.css';
-import HomePage from './Home Page/HomePage';
-import AboutusPage from './Aboutus Page/AboutusPage';
+import HomePage from './Pages/Home Page/HomePage';
+import AboutusPage from './Pages/Aboutus Page/AboutusPage';
 
 function App() {
   return (
