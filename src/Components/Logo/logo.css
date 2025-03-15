@@ -1,0 +1,40 @@
+.base{
+    margin-top: 70px;
+    margin-left: 200px;
+}
+.circle{
+    position: absolute;
+    height: 420px;
+    width: 420px;
+    border-radius: 50%;
+    box-shadow: 10px 8px 5px rgb(38, 157, 187);
+    animation: rotate 2.5s infinite linear;
+
+  }
+  .txtLogo{
+    position: fixed;
+    width: 395px;
+    height: 395px;
+    border-radius: 50%;
+    /* background-color: #2b2b2b; */
+    background-color: #2b2b2b;
+  }
+  .logoT{
+    position: relative;
+    align-items: center;
+    background-color: #2b2b2b;
+  }
+  
+  .txtLogo img{
+    /* margin: 20px; */
+    width: 420px;
+    border-radius: 50%;
+    height: 420px;
+   
+  }
+  @keyframes rotate{
+    100%{
+      transform:rotate(360deg);
+      /* filter:hue-rotate(360deg); */
+    }
+  }
