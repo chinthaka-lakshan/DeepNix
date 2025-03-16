@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Contact_us.css";
-import Navbar from "../../Components/Navbar"; 
-// import Logo from "../../Components/Logo/Logo";
+import Navbar from "../../Components/Navbar";
+import Logo from "../../Components/Logo/Logo";
+import { Facebook, YouTube, WhatsApp } from "@mui/icons-material";
+import TikTokIcon from "@mui/icons-material/MusicNote"; // TikTok does not have an official MUI icon, using MusicNote as an alternative
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -36,11 +38,12 @@ const ContactUs = () => {
 
   return (
     <>
-      <Navbar /> 
-      {/* <Logo/> */}
+      <Navbar />
+      <div className="watermark">
+        <Logo />
+      </div>
       <div className="contact-container">
         <div className="contact-box">
-          
           <h2>Contact <span className="highlight">Us</span></h2>
           <p>Get in touch with us! Fill out the form, and we'll reach out to you soon.</p>
 
@@ -78,11 +81,17 @@ const ContactUs = () => {
               value={formData.message} 
               onChange={handleChange}
             ></textarea>
-                <div className="sub">
-                    <button type="submit">Submit</button>
-                </div>
-           
+            <div className="sub">
+              <button type="submit">Submit</button>
+            </div>
           </form>
+
+          <div className="social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><Facebook /></a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><TikTokIcon /></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><YouTube /></a>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer"><WhatsApp /></a>
+          </div>
         </div>
       </div>
     </>

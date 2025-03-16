@@ -11,6 +11,11 @@
     background-color: #1a1a1a;
     color: white;
   }
+  .watermark{
+    position:fixed;
+    top: 20%;
+    left: 50%;
+  }
   
   /* Contact Page Container */
   .contact-container {
@@ -25,7 +30,7 @@
 
   .contact-box{
     margin-bottom: 60px;
-    margin-right: 400px;
+    margin-right: 700px;
 
   }
   
@@ -119,6 +124,21 @@
   
   button:hover {
     background: #0088cc;
+  }
+  .social-icons {
+    display: flex;
+    gap: 15px; /* Adjust the space between icons */
+
+  }
+  
+  .social-icons a {
+    color: #ffffff; /* Change color as needed */
+    font-size: 24px; /* Adjust icon size */
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff; /* Change hover color as needed */
   }
   
   /* Responsive Fixes */
