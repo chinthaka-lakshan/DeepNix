@@ -4,3 +4,78 @@
     box-sizing: border-box;
     background-color: #2B2B2B;
 }
+
+body {
+    background-color: #2B2B2B;
+    color: white; 
+    font-family:'rushblade Demo'; 
+}
+
+.welcome-section {
+    text-align: left; 
+    margin-top: 20px; 
+}
+
+.welcome-section h1 {
+    font-size: 2.5em; 
+    margin-bottom: 10px; 
+}
+
+.welcome-section h2 {
+    font-size: 5em; 
+    color: #41bbea; 
+    font-family: 'rushblade Demo';
+}
+
+.paragraph-section {
+    text-align: justify; 
+    margin-top: 20px; 
+    font-size: 1.3rem;
+    font-family: 'Orbit';
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+    text-align: centet; 
+    color: #fff;
+    margin-top: 20px;
+}
+
+.button-section {
+    text-align: center; 
+    margin-top: 20px; 
+
+}
+
+/* "Hire Us" button */
+.hire-us {
+    background-color: #41bbea; 
+    color: #000; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 1em;
+    cursor: pointer; 
+    margin-right: 10px; 
+    border-radius: 25px; 
+}
+
+/* Hover effect for the "Hire Us" button */
+.hire-us:hover {
+    background-color:#41bbea; 
+}
+
+/*  "Let's Talk" button */
+.lets-talk {
+    background-color: #6c757d; 
+    color: #41bbea; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 1em; 
+    cursor: pointer; 
+    border-radius: 25px; 
+    
+}
+
+/* Hover effect for the "Let's Talk" button */
+.lets-talk:hover {
+    background-color: #5a6268; 
+}
+
