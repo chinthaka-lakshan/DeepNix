@@ -39,7 +39,7 @@ const ContactUs = () => {
   return (
     <>
       <Navbar />
-      <div className="watermark">
+      <div className="watermark1">
         <Logo />
       </div>
       <div className="contact-container">
