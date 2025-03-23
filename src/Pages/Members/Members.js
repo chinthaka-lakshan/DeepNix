@@ -7,7 +7,7 @@ import Logo from '../../Components/Logo/Logo';
 
 const teamMembers = [
   { id: 1, name: 'M.J.C.D. Lakshan', role: 'Web Developer', description: 'Experienced in full-stack web development.' },
-  { id: 2, name: 'John Doe', role: 'UI/UX Designer', description: 'Passionate about creating user-friendly designs.' },
+  { id: 2, name: 'Tharusha Ishan', role: 'UI/UX Designer', description: 'Passionate about creating user-friendly designs.' },
   { id: 3, name: 'Jane Smith', role: 'Project Manager', description: 'Expert in Agile development and team leadership.' },
   { id: 4, name: 'Alice Brown', role: 'Frontend Developer', description: 'Loves building modern, responsive UI.' },
   { id: 5, name: 'Bob Johnson', role: 'Backend Developer', description: 'Focuses on APIs and database management.' },
