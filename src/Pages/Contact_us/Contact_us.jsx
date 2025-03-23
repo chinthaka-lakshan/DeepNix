@@ -3,7 +3,7 @@ import "./Contact_us.css";
 import Navbar from "../../Components/Navbar";
 import Logo from "../../Components/Logo/Logo";
 import { Facebook, YouTube, WhatsApp } from "@mui/icons-material";
-import TikTokIcon from "@mui/icons-material/MusicNote"; // TikTok does not have an official MUI icon, using MusicNote as an alternative
+import TikTokIcon from "@mui/icons-material/MusicNote"; // TikTok alternative icon
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -13,27 +13,34 @@ const ContactUs = () => {
     message: "",
   });
 
+  // ✅ Fix: Update formData when input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email) {
-      alert("Please fill in the required fields: Name and Email.");
-      return;
+    try {
+      const response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", phone: "", email: "", message: "" }); // Reset form after submission
+      } else {
+        alert("Error: " + data.error);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong.");
     }
-
-    console.log("Form Submitted:", formData);
-    alert("Your message has been sent!");
-
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      message: "",
-    });
   };
 
   return (
@@ -44,42 +51,45 @@ const ContactUs = () => {
       </div>
       <div className="contact-container">
         <div className="contact-box">
-          <h2>Contact <span className="highlight">Us</span></h2>
+          <h2>
+            Contact <span className="highlight">Us</span>
+          </h2>
           <p>Get in touch with us! Fill out the form, and we'll reach out to you soon.</p>
 
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="input-row">
-              <input 
-                type="text" 
-                name="name" 
-                placeholder="Enter Your Name" 
-                value={formData.name} 
-                onChange={handleChange} 
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter Your Name"
+                value={formData.name}
+                onChange={handleChange}
                 required
               />
-              <input 
-                type="tel" 
-                name="phone" 
-                placeholder="Phone Number" 
-                value={formData.phone} 
-                onChange={handleChange} 
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
               />
             </div>
 
-            <input 
-              type="email" 
-              name="email" 
-              placeholder="E-mail" 
-              value={formData.email} 
-              onChange={handleChange} 
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              value={formData.email}
+              onChange={handleChange}
               required
             />
 
-            <textarea 
-              name="message" 
-              placeholder="Message..." 
-              value={formData.message} 
+            <textarea
+              name="message"
+              placeholder="Message..."
+              value={formData.message}
               onChange={handleChange}
+              required
             ></textarea>
             <div className="sub">
               <button type="submit">Submit</button>
@@ -87,10 +97,18 @@ const ContactUs = () => {
           </form>
 
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><Facebook /></a>
-            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><TikTokIcon /></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><YouTube /></a>
-            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer"><WhatsApp /></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <Facebook />
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+              <TikTokIcon />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <YouTube />
+            </a>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+              <WhatsApp />
+            </a>
           </div>
         </div>
       </div>
