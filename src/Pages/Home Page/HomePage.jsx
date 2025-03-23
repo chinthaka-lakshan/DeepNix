@@ -1,7 +1,7 @@
 import React from 'react';
 import './homePage.css';
 import { useTypewriter } from 'react-simple-typewriter';
-import Navbar from '../Components/Navbar';
+import Navbar from '../../Components/Navbar';
 
 export default function HomePage() {
 

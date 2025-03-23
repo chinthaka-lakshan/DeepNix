@@ -1,0 +1,154 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Full Page Styling */
+  body {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  .watermark1{
+    position:fixed;
+    top: 20%;
+    left: 50%;
+  }
+  
+  /* Contact Page Container */
+  .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+   
+  }
+
+  .contact-box{
+    margin-bottom: 60px;
+    margin-right: 700px;
+
+  }
+  
+  
+   /* .contact-box {
+    background: #d93131;
+    padding: 40px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 60px;
+    margin-right: 400px;
+  }
+   */
+  /* Branding Name */
+  .brand-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00aaff;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact Heading */
+  .contact-box h2 {
+    color: #00aaff;
+    margin-bottom: 20px;
+    font-size: 3rem;
+  }
+  
+  .contact-box p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 5px;
+  }
+  
+  /* Form Inputs */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .input-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .input-row input {
+    width: 50%;
+  }
+  
+  /* Input Fields */
+  input,
+  textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid #00aaff;
+    background: transparent;
+    color: rgb(215, 203, 203);
+    border-radius: 8px;
+  }
+
+  input[type="email"] {
+   
+    width: 800px; /* Set a max width */
+}
+  
+  textarea {
+    resize: none;
+    height: 120px;
+  }
+  
+  /* Submit Button */
+  button {
+    background: #00aaff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+
+  .sub{
+    margin-left: 700px;
+  }
+  
+  button:hover {
+    background: #0088cc;
+  }
+  .social-icons {
+    display: flex;
+    gap: 15px; /* Adjust the space between icons */
+
+  }
+  
+  .social-icons a {
+    color: #ffffff; /* Change color as needed */
+    font-size: 24px; /* Adjust icon size */
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff; /* Change hover color as needed */
+  }
+  
+  /* Responsive Fixes */
+  @media (max-width: 768px) {
+    .input-row {
+      flex-direction: column;
+    }
+  
+    .input-row input {
+      width: 100%;
+    }
+  }
+  
