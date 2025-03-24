@@ -1,0 +1,129 @@
+.services-content {
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Heading Styles */
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 70px;
+    color: #00aaff;
+  }
+  h3 {
+    font-size: 3rem;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    color: #00aaff;
+  }
+  
+  /* Cards Container */
+  .services-cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+  }
+  
+  /* Service Card Styles */
+  .service-card {
+    background-color: white;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image Styling */
+  .service-image {
+    background-color: #ffffff;
+    height: 300px;
+    margin: 30px auto 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+  }
+  
+  /* Linking Images from Assets Folder */
+  .uiux-image {
+    background-image: url("../../Assets/uiux.png");
+  }
+  .webdev-image {
+    background-image: url("../../Assets/webdev.png");
+  }
+  .digital-image {
+    background-image: url("../../Assets/digital.png");
+  }
+  
+  /* Responsive Design */
+  
+  /* For Tablets */
+  @media (max-width: 1024px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    .services-cards {
+        gap: 50px;
+    }
+    .service-card {
+        width: 350px;
+        height: 550px;
+    }
+    .service-image {
+        height: 350px;
+    }
+  }
+  
+  /* For Mobile Devices */
+  @media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    .services-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .service-card {
+        width: 300px;
+        height: 500px;
+        padding: 20px;
+    }
+    .service-image {
+        height: 300px;
+    }
+  }
+  
+  /* For Smaller Mobile Devices */
+  @media (max-width: 480px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    .service-card {
+        width: 260px;
+        height: 450px;
+        padding: 15px;
+    }
+    .service-image {
+        height: 260px;
+    }
+  }
