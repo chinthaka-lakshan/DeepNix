@@ -1,20 +1,24 @@
 import React from 'react';
 import './aboutusPage.css';
-import Navbar from '../../Components/Navbar';
+import Navbar from '../../Components/Navbar/Navbar';
+import Logo from '../../Components/Logo/Logo'; // Ensure the correct path
 
 export default function AboutusPage() {
   return (
     <div className="About-Us-page">
-      {/* Nav bar */}
       <Navbar />
 
-      {/* About Us Section */}
+      <div className="watermark-right1">
+        <Logo />
+      </div>
+
+      {/* Right Side - About Us Content */}
       <div className="about-us-content">
-      <h1>
-          <span className="about-text">About  </span> 
+        <h1>
+          <span className="about-text">About </span>
           <span className="us-text">Us</span>
         </h1>
-        <p>
+        <p className="about-us-description">
           Welcome to Deepflix, where innovation meets technology. We are a passionate team of web developers dedicated to crafting high-performance, scalable, and visually stunning digital solutions. Our expertise spans across custom website development, web applications, e-commerce platforms, and UI/UX design, ensuring that businesses stay ahead in the digital era.
         </p>
         <p>

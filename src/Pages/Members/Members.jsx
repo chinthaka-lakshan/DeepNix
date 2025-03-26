@@ -1,6 +1,6 @@
 import React from 'react';
 import './Members.css';
-import Navbar from '../../Components/Navbar'; // Ensure correct import path
+import Navbar from '../../Components/Navbar/Navbar'; // Ensure correct import path
 import image from '../../Assets/person.png'; // Ensure correct path
 import logoImage from '../../Components/Logo/Logo'; // Watermark image path
 import Logo from '../../Components/Logo/Logo';

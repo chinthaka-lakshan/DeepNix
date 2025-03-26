@@ -1,13 +1,16 @@
 import React from "react";
-import Navbar from "../../Components/Navbar";
+import Navbar from "../../Components/Navbar/Navbar";
 import "./Services.css";
-
+import Logo from "../../Components/Logo/Logo";
 const ServicesPage = () => {
   return (
     <div className="services-container">
       <Navbar />
+      <div className="watermark-right2">
+        <Logo />
+      </div>
       <div className="services-content">
-        <h2>Our Services</h2>
+        <h1 className="heading"><span>Our</span> Services</h1>
         <div className="services-cards">
           <div className="service-card">
             <h3>UI/UX Designing</h3>

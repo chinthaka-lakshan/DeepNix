@@ -14,7 +14,7 @@
   .watermark1{
     position:fixed;
     top: 20%;
-    left: 50%;
+    left: 53%;
   }
   
   /* Contact Page Container */
@@ -23,14 +23,14 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
-    padding: 20px;
+    height: 90vh;
+    padding: 30px;
    
   }
 
   .contact-box{
     margin-bottom: 60px;
-    margin-right: 700px;
+    margin-right: 800px;
 
   }
   
