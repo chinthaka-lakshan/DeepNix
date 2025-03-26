@@ -13,6 +13,7 @@ import member6mage from "../../Assets/tharushi.jpeg";
 import member7mage from "../../Assets/tharusha.jpeg";
 import member8mage from "../../Assets/rashen.jpeg";
 import member9mage from "../../Assets/sachiya.jpeg";
+import member10mage from "../../Assets/piyumal.jpeg";
 
 const teamMembers = [
   {
@@ -36,13 +37,13 @@ const teamMembers = [
     // description: "Specialist in backend development and databases.",
     image: member3Image, // Unique image for this member
   },
-  // {
-  //   id: 4,
-  //   name: "Piyumal Wijesinghe",
-  //   // role: "Backend Developer",
-  //   // description: "Specialist in backend development and databases.",
-  //   image: member4mage, // Unique image for this member
-  // },
+  {
+    id: 10,
+    name: "Piyumal Wijesinghe",
+    // role: "Backend Developer",
+    // description: "Specialist in backend development and databases.",
+    image: member10mage, // Unique image for this member
+  },
   {
     id: 5,
     name: "Ayodya Senavirathne",
@@ -52,7 +53,7 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Dewaka",
+    name: "Dewaka Pasindu",
     // role: "Backend Developer",
     // description: "Specialist in backend development and databases.",
     image: member4mage, // Unique image for this member
