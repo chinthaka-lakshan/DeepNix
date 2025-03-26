@@ -7,7 +7,7 @@ const ServicesPage = () => {
     <div className="services-container">
       <Navbar />
       <div className="services-content">
-        <h2>Our Services</h2>
+        <h1 className="heading"><span>Our</span> Services</h1>
         <div className="services-cards">
           <div className="service-card">
             <h3>UI/UX Designing</h3>

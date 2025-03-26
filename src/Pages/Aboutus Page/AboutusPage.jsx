@@ -8,7 +8,7 @@ export default function AboutusPage() {
     <div className="About-Us-page">
       <Navbar />
 
-      <div className="watermark-right">
+      <div className="watermark-right1">
         <Logo />
       </div>
 

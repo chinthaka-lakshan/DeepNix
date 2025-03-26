@@ -3,8 +3,8 @@ import './Portfolios.css';
 import Navbar from "../../Components/Navbar/Navbar";
 
 import LetsGrow from '../../Assets/letsgrow.png';
-import Atharaman from '../../Assets/atharaman.png';
-import OurProjects from '../../Assets/ourprojects.png';
+import Atharaman from '../../Assets/Atharama.png';
+import OurProjects from '../../Assets/MALL.png';
 
 const Portfolios = () => {
     return (
@@ -23,7 +23,7 @@ const Portfolios = () => {
                     </div>
                     <div className="project-card">
                         <img src={OurProjects} alt="Our Projects" />
-                        <h2>Our Projects</h2>
+                        <h2>CyberMall</h2>
                     </div>
                 </div>
             </div>

@@ -1,16 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
 .services-content {
     text-align: center;
     padding: 50px 20px;
     position: relative;
     z-index: 1;
+    font-family: 'Rushblade Demo';
   }
   
   /* Heading Styles */
-  h2 {
+  .heading {
     font-size: 3rem;
     margin-bottom: 70px;
-    color: #00aaff;
+    color: #ffffff;
+    font-family: 'Rushblade Demo';
+    letter-spacing: 1px;
   }
+  .h2 span {
+    color: #3EBEFF;
+    font-family: 'Rushblade Demo';
+  }
+  
   h3 {
     font-size: 3rem;
     background-color: #ffffff;
@@ -42,6 +51,7 @@
   
   .service-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(62, 190, 255, 0.5);
   }
   
   /* Image Styling */
