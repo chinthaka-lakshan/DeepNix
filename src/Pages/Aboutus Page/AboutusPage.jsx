@@ -1,9 +1,11 @@
 import React from 'react';
 import './aboutusPage.css';
 import Navbar from '../../Components/Navbar/Navbar';
-import Logo from '../../Components/Logo/Logo'; // Ensure the correct path
+import Logo from '../../Components/Logo/Logo'; 
+import { useNavigate } from 'react-router-dom';
 
 export default function AboutusPage() {
+    const navigate = useNavigate();
   return (
     <div className="About-Us-page">
       <Navbar />
@@ -27,7 +29,7 @@ export default function AboutusPage() {
         <p>Let’s build the future together.</p>
 
         {/* Members Button */}
-        <button className="members-button">Members</button>
+        <button className="members-button"onClick={() => navigate('/members')}>Members</button>
       </div>
     </div>
   );
