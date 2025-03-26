@@ -4,6 +4,11 @@
   box-sizing: border-box;
   background-color: #000000;
 }
+.watermark-right{
+  position:fixed;
+  top: 25%;
+  left: 55%;
+}
 
 
 
@@ -42,6 +47,8 @@ font-size: 130px;
 font-style: normal;
 
 }
+
+
 
 h1 {
 font-size: 40px;
@@ -120,9 +127,4 @@ height: 103px;
 margin-left: 135px;
 margin-top: 50px;
 color: white;
-}
-.watermark1{
-  position:fixed;
-  top: 70%;
-  left: 50%;
 }

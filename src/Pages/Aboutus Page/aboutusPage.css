@@ -1,54 +1,48 @@
 
-.about-us-page {
-    font-family: 'Orbit'; 
-    color: #333; 
-    padding: 20px; 
-    max-width: 800px; 
-    margin: 0 auto; 
-    text-align: center; 
-  }
-  
-  /* About Us Heading */
-  .about-us-content h1 {
-    font-size: 3.0rem; 
-    margin-bottom: 20px; 
-    text-align: center;
-  }
-  
-  .about-text {
-    color: #fff; 
-  }
-  
-  .us-text {
-    color: #41bbea; 
-  }
-  
-  /* Paragraph */
-  .about-us-content p {
-    font-size: 1.3rem; 
-    font-family: 'Orbit';
-    line-height: 1.6; 
-    margin-bottom: 20px; 
-    text-align: centet; 
-    color: #fff;
-    margin-top: 20px;
-  }
-  
-  /* Members button */
-  .members-button {
-    background-color: #41bbea; 
-    color: #000000; 
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 1rem; 
-    cursor: pointer; 
-    border-radius: 25px; 
-    transition: background-color 0.3s ease; 
-    text-align: center;
-    margin: 0 auto;
-  }
-  
-  /* Hover effect for the Members button */
-  .members-button:hover {
-    background-color: #0056b3; 
-  }
+
+
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align content to the left */
+  justify-content: center;
+  max-width: 800px; /* Ensures content is not too wide */
+  color: white;
+  margin-left: 50%;
+  margin-top: 5%;
+  text-align:center;
+  padding: 20px;
+}
+.watermark-right{
+  position:fixed;
+  top: 20%;
+  left: 3%;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.about-us-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+
+.members-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.members-button:hover {
+  background-color: white;
+  color: #00aaff;
+}
