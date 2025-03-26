@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact_us.css";
-import Navbar from "../../Components/Navbar";
+import Navbar from "../../Components/Navbar/Navbar";
 import Logo from "../../Components/Logo/Logo";
 import { Facebook, YouTube, WhatsApp } from "@mui/icons-material";
 import TikTokIcon from "@mui/icons-material/MusicNote"; // TikTok does not have an official MUI icon, using MusicNote as an alternative

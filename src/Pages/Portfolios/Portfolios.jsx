@@ -1,6 +1,6 @@
 import React from 'react';
 import './Portfolios.css';
-import Navbar from "../../Components/Navbar";
+import Navbar from "../../Components/Navbar/Navbar";
 
 import LetsGrow from '../../Assets/letsgrow.png';
 import Atharaman from '../../Assets/atharaman.png';

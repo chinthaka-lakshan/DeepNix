@@ -1,6 +1,6 @@
 import React from 'react';
 import './aboutusPage.css';
-import Navbar from '../../Components/Navbar';
+import Navbar from '../../Components/Navbar/Navbar';
 
 export default function AboutusPage() {
   return (

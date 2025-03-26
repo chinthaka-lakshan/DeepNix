@@ -1,7 +1,7 @@
 import React from 'react';
 import './homePage.css';
 import { useTypewriter } from 'react-simple-typewriter';
-import Navbar from '../../Components/Navbar'; // Ensure correct path
+import Navbar from '../../Components/Navbar/Navbar'; // Ensure correct path
 import Logo from '../../Components/Logo/Logo'; // Ensure correct path
 
 export default function HomePage() {
