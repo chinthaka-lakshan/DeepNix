@@ -3,19 +3,20 @@
 body {
   font-family: 'Orbit', sans-serif;
   background-color: #111827;
-  color: white;
 }
 .members-container {
     position: relative; /* Ensures proper layering */
-    overflow: visible; /* Prevents clipping */
+    overflow: visible;
+    padding: 0 30px; /* Prevents clipping */
+    border-radius: 0;
 }
 
 .watermark {
     position: fixed; /* Keeps it centered regardless of scroll */
-    top: 25%;
+    top: 55%;
     left: 35%;
     transform: translate(-50%, -50%); /* Centers the watermark */
-    opacity: 0.08; /* Adjust transparency */
+    opacity: 0; /* Adjust transparency */
     z-index: 0; /* Keeps it behind other content */
     width: 40%; /* Adjust size as needed */
     max-width: 500px;
@@ -38,6 +39,7 @@ body {
 .member-card {
   background-color: #1E293B;
   padding: 20px;
+  box-shadow: none;
   border-radius: 12px;
   border: 2px solid transparent;
   transition: 0.3s ease-in-out;
@@ -50,18 +52,28 @@ body {
 }
 
 .member-avatar {
-  width: 60px;
-  border-radius: 50%;
-  border: 2px solid #374151;
+  width: 220px;
+  height: 220px;
+  border-radius: 20%;
+  object-fit: cover;
 }
-
-h3 {
-  font-size: 20px;
+.member-name {
+  color: #60A5FA;
+  font-size: 30px;
   font-weight: bold;
+  text-align: center;
   margin-top: 10px;
+  box-shadow: none;
 }
 
-p {
+
+
+/* h3 {
+  font-size: 20px;
+  margin-top: 10px;
+} */
+
+/* p {
   font-size: 14px;
   color: #CBD5E1;
-}
+} */

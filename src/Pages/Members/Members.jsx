@@ -1,26 +1,90 @@
-import React from 'react';
-import './Members.css';
-import Navbar from '../../Components/Navbar/Navbar'; // Ensure correct import path
-import image from '../../Assets/person.png'; // Ensure correct path
-import logoImage from '../../Components/Logo/Logo'; // Watermark image path
-import Logo from '../../Components/Logo/Logo';
+import React from "react";
+import "./Members.css";
+import Navbar from "../../Components/Navbar/Navbar"; // Ensure correct import path
+import Logo from "../../Components/Logo/Logo";
+
+// Import member images
+import member1Image from "../../Assets/harith.jpeg";
+import member2Image from "../../Assets/lakshan.jpeg";
+import member3Image from "../../Assets/hasitha.jpeg";
+import member4mage from "../../Assets/dewaka.jpeg";
+import member5mage from "../../Assets/sheru.jpeg";
+import member6mage from "../../Assets/tharushi.jpeg";
+import member7mage from "../../Assets/tharusha.jpeg";
+import member8mage from "../../Assets/rashen.jpeg";
+import member9mage from "../../Assets/sachiya.jpeg";
 
 const teamMembers = [
-  { id: 1, name: 'M.J.C.D. Lakshan', role: 'Web Developer', description: 'Experienced in full-stack web development.' },
-  { id: 2, name: 'Tharusha Ishan', role: 'UI/UX Designer', description: 'Passionate about creating user-friendly designs.' },
-  { id: 3, name: 'Jane Smith', role: 'Project Manager', description: 'Expert in Agile development and team leadership.' },
-  { id: 4, name: 'Alice Brown', role: 'Frontend Developer', description: 'Loves building modern, responsive UI.' },
-  { id: 5, name: 'Bob Johnson', role: 'Backend Developer', description: 'Focuses on APIs and database management.' },
-  { id: 6, name: 'Charlie Davis', role: 'QA Engineer', description: 'Ensures software meets high-quality standards.' },
-  { id: 7, name: 'Emily Wilson', role: 'Cyber Security', description: 'Specialized in protecting web applications.' },
-  { id: 8, name: 'David Lee', role: 'DevOps Engineer', description: 'Optimizing deployment and infrastructure.' },
-  { id: 9, name: 'Sophia Martinez', role: 'Mobile Developer', description: 'Builds high-performance mobile apps.' },
-  { id: 10, name: 'Alice Brown', role: 'Frontend Developer', description: 'Loves building modern, responsive UI.' },
-  { id: 11, name: 'Bob Johnson', role: 'Backend Developer', description: 'Focuses on APIs and database management.' },
-  { id: 12, name: 'Charlie Davis', role: 'QA Engineer', description: 'Ensures software meets high-quality standards.' },
-  { id: 13, name: 'Emily Wilson', role: 'Cyber Security', description: 'Specialized in protecting web applications.' },
-  { id: 14, name: 'David Lee', role: 'DevOps Engineer', description: 'Optimizing deployment and infrastructure.' },
-  { id: 15, name: 'Sophia Martinez', role: 'Mobile Developer', description: 'Builds high-performance mobile apps.' },
+  {
+    id: 1,
+    name: "Harith D Rajapaksha",
+    // role: "Software Engineer",
+    // description: "Expert in web development and UI/UX design.",
+    image: member1Image, // Unique image for this member
+  },
+  {
+    id: 2,
+    name: "M J C D Lakshan",
+    // role: "Backend Developer",
+    // description: "Specialist in backend development and databases.",
+    image: member2Image, // Unique image for this member
+  },
+  {
+    id: 3,
+    name: "Hasitha Wijewardana",
+    // role: "Backend Developer",
+    // description: "Specialist in backend development and databases.",
+    image: member3Image, // Unique image for this member
+  },
+  // {
+  //   id: 4,
+  //   name: "Piyumal Wijesinghe",
+  //   // role: "Backend Developer",
+  //   // description: "Specialist in backend development and databases.",
+  //   image: member4mage, // Unique image for this member
+  // },
+  {
+    id: 5,
+    name: "Ayodya Senavirathne",
+    // role: "Backend Developer",
+    // description: "Specialist in backend development and databases.",
+    image: member5mage, // Unique image for this member
+  },
+  {
+    id: 4,
+    name: "Dewaka",
+    // role: "Backend Developer",
+    // description: "Specialist in backend development and databases.",
+    image: member4mage, // Unique image for this member
+  },
+  {
+    id: 6,
+    name: "Tharushi Senavirathne",
+    // role: "Backend Developer",
+    // description: "Specialist in backend development and databases.",
+    image: member6mage, // Unique image for this member
+  },
+  {
+    id: 7,
+    name: "Tharusha Ishan",
+    // role: "Backend Developer",
+    // description: "Specialist in backend development and databases.",
+    image: member7mage, // Unique image for this member
+  },
+  {
+    id: 8,
+    name: "Sachintha Rashen",
+    // role: "Backend Developer",
+    // description: "Specialist in backend development and databases.",
+    image: member8mage, // Unique image for this member
+  },
+  {
+    id: 9,
+    name: "Sachintha Jayaweera",
+    // role: "Backend Developer",
+    // description: "Specialist in backend development and databases.",
+    image: member9mage, // Unique image for this member
+  },
 ];
 
 export default function Members() {
@@ -31,16 +95,18 @@ export default function Members() {
 
       {/* Watermark Background */}
       <div className="watermark">
-        <Logo/>
+        <Logo />
       </div>
 
       {/* Members Section */}
       <div className="members-grid">
         {teamMembers.map((member) => (
           <div key={member.id} className="member-card">
-            <img src={image} alt={member.name} className="member-avatar" />
+            <img src={member.image} alt={member.name} className="member-avatar" />
             <h3 className="member-name">{member.name}</h3>
-            <p className="member-role"><strong>{member.role}</strong></p>
+            <p className="member-role">
+              <strong>{member.role}</strong>
+            </p>
             <p className="member-description">{member.description}</p>
           </div>
         ))}
