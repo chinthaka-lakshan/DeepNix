@@ -70,12 +70,12 @@ const Team: React.FC = () => {
       name: 'Ayodya Senevirathne',
       role: 'Frontend Developer',
       image: Ayodya,
-      bio: 'Frontend specialist focused on creating stunning and performant user interfaces.',
+      bio: 'undergraduate Software Engineer with a strong passion for crafting clean, user-friendly digital experiences. My role is UI/UX designer and front-end developer, combining creativity with code to bring intuitive and visually engaging interfaces to life. I love turning ideas into interactive and responsive designs that users enjoy.',
       skills: ['React', 'TypeScript', 'CSS Animations'],
       social: {
-        linkedin: '#',
-        github: '#',
-        email: 'david@deepnix.com'
+        linkedin: 'https://www.linkedin.com/in/ayodya-senavirathne-a15839316/',
+        github: 'https://github.com/ayodyasenavirathne',
+        email: 'ayodyasewmini2001@gmail.com'
       }
     },
     {
