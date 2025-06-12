@@ -2,7 +2,7 @@ import React from 'react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import Atharaman from '../assets/atharaman.png';
 import ymproducts from '../assets/ymproducts.png';
-import CyberMall from '../assets/cybermall.png';
+import CyberMall from '../assets/CyberMall.png';
 
 const Portfolio: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
