@@ -110,7 +110,7 @@ const Team: React.FC = () => {
       name: 'Tharusha Ishan',
       role: 'DevOps Engineer',
       image: Tharusha,
-      bio: 'Infrastructure expert ensuring smooth deployment and optimal performance.',
+      bio: 'Software engineering student specializing in full-stack web development. Proficient in React.js, Node.js, Spring Boot, and MySQL.',
       skills: ['AWS', 'Docker', 'Kubernetes'],
       social: {
         linkedin: 'https://www.linkedin.com/in/tharusha-ishan-5b438431b',
