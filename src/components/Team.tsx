@@ -10,6 +10,7 @@ import Tharusha from '../assets/Team/tharusha.jpeg';
 import Hasitha from '../assets/Team/hasitha.jpeg';
 import Piyumal from '../assets/Team/piyumal.jpeg';
 import Tharushi from '../assets/Team/tharushi.jpeg';
+import Visal from '../assets/Team/visal.jpeg';
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -65,6 +66,19 @@ const Team: React.FC = () => {
         email: 'emma@deepnix.com'
       }
     },
+        {
+      id: 5,
+      name: 'Visal Hewage',
+      role: 'Frontend Developer',
+      image: Visal,
+      bio: 'undergraduate Software Engineer with a strong passion for crafting clean, user-friendly digital experiences. My role is UI/UX designer and front-end developer, combining creativity with code to bring intuitive and visually engaging interfaces to life. I love turning ideas into interactive and responsive designs that users enjoy.',
+      skills: ['React', 'TypeScript', 'CSS Animations'],
+      social: {
+        linkedin: 'https://www.linkedin.com/in/ayodya-senavirathne-a15839316/',
+        github: 'https://github.com/ayodyasenavirathne',
+        email: 'ayodyasewmini2001@gmail.com'
+      }
+    },
     {
       id: 5,
       name: 'Ayodya Senevirathne',
@@ -83,12 +97,12 @@ const Team: React.FC = () => {
       name: 'Sachintha Jayaweera',
       role: 'Backend Developer',
       image: sachintha,
-      bio: 'Backend expert building robust and scalable server-side applications.',
+      bio: 'A highly motivated and detail-oriented Software Engineering undergraduate with strong skills in full-stack web development, including ReactJs, NodeJs, Spring Boot and MySQL. Experienced in developing user-centric applications and managing end-to-end project lifecycles. Passionate about solving real-world problems through technology and continuously improving both technical and soft skills.',
       skills: ['Python', 'Django', 'PostgreSQL'],
       social: {
-        linkedin: '#',
-        github: '#',
-        email: 'lisa@deepnix.com'
+        linkedin: ' https://www.linkedin.com/in/sachintha-jayaweera-057587320/',
+        github: ' https://github.com/Sachinthajayaweera',
+        email: 'sachinthajayaweera2@gmail.com'
       }
     },
     {
@@ -99,9 +113,9 @@ const Team: React.FC = () => {
       bio: 'Infrastructure expert ensuring smooth deployment and optimal performance.',
       skills: ['AWS', 'Docker', 'Kubernetes'],
       social: {
-        linkedin: '#',
-        github: '#',
-        email: 'james@deepnix.com'
+        linkedin: 'https://www.linkedin.com/in/tharusha-ishan-5b438431b',
+        github: 'https://github.com/Tharusha-Ishan',
+        email: ' tharu553edu@gmail.com'
       }
     },
     {
