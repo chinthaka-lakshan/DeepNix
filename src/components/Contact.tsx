@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { Mail, Phone, Send, Facebook, Youtube, MessageCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
@@ -27,20 +27,22 @@ const handleSubmit = async (e: React.FormEvent) => {
   setIsSubmitting(true);
 
   try {
+    // 2. Use the 'send' method with the correct object structure
     await emailjs.send(
       'service_2dxhvbq',
       'template_zcayn0h',
-      formData,
-      '6tkcZrRwRKxVbRzMW'
+      {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      '6tkcZrRwRKxVbRzMW' // Your Public Key
     );
+    
     setSubmitStatus('success');
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      subject: '',
-      message: ''
-    });
+    setFormData({ name: '', email: '', company: '', subject: '', message: '' });
   } catch (error) {
     console.error('EmailJS Error:', error);
     setSubmitStatus('error');

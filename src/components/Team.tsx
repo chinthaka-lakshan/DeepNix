@@ -80,7 +80,7 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 5,
+      id: 6,
       name: 'Ayodya Senevirathne',
       role: 'Frontend Developer',
       image: Ayodya,
@@ -93,7 +93,7 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 6,
+      id: 7,
       name: 'Sachintha Jayaweera',
       role: 'Backend Developer',
       image: sachintha,
@@ -106,7 +106,7 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 7,
+      id: 8,
       name: 'Tharusha Ishan',
       role: 'DevOps Engineer',
       image: Tharusha,
@@ -119,7 +119,7 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 8,
+      id: 9,
       name: 'Hasitha Wijesinghe',
       role: 'Product Manager',
       image: Hasitha,
@@ -132,7 +132,7 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 9,
+      id: 10,
       name: 'Piyumal Pahasara',
       role: 'QA Engineer',
       image: Piyumal,
@@ -146,7 +146,7 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 10,
+      id: 11,
       name: 'Tharushi Senevirathne',
       role: 'Content Strategist',
       image: Tharushi,

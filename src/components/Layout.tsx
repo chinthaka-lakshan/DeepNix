@@ -44,7 +44,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             >
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <img 
-                  src="/DeepNix.png" 
+                  src="/DeepNixx.png" 
                   alt="DEEPNIX Logo" 
                   className="w-8 h-8 object-contain filter brightness-0 invert"
                 />
