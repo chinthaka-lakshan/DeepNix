@@ -36,22 +36,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
+          <div className="flex justify-between items-center h-20">
+            {/* Updated Logo Section */}
             <button 
               onClick={() => scrollToSection('home')}
-              className="flex items-center space-x-2 group"
+              className="flex items-center group"
             >
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <img 
-                  src="/DeepNixx.png" 
-                  alt="DEEPNIX Logo" 
-                  className="w-8 h-8 object-contain filter brightness-0 invert"
-                />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                DEEPNIX
-              </span>
+              <img 
+                src="/DeepNixx.jpeg" 
+                alt="DEEPNIX Logo" 
+                className="h-12 w-auto rounded-md object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </button>
 
             {/* Desktop Navigation */}
@@ -105,19 +100,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Footer */}
       <footer className="relative z-10 bg-gray-900/90 backdrop-blur-md border-t border-gray-800 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center">
-                <img 
-                  src="/DeepNix.png" 
-                  alt="DEEPNIX Logo" 
-                  className="w-6 h-6 object-contain filter brightness-0 invert"
-                />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                DEEPNIX
-              </span>
-            </div>
+          <div className="text-center flex flex-col items-center">
+            <img 
+              src="/DeepNixx.jpeg" 
+              alt="DEEPNIX" 
+              className="h-10 w-auto rounded-md object-contain hover:scale-105 transition-transform duration-300"
+              onError={(e) => {
+                console.error("Logo failed to load. Check if DeepNixx.jpeg is in the public folder.");
+              }}
+            />
             <p className="text-gray-400 text-sm">
               © 2025 DEEPNIX. All rights reserved. Transforming businesses through innovative technology solutions.
             </p>
