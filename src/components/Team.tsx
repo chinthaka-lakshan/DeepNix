@@ -120,7 +120,7 @@ const Team: React.FC = () => {
     },
     {
       id: 9,
-      name: 'Hasitha Wijesinghe',
+      name: 'Hasitha Wijewardhana',
       role: 'Product Manager',
       image: Hasitha,
       bio: 'Strategic product leader driving innovation and user-centered solutions.',
