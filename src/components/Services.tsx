@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palette, Code, TrendingUp, ArrowRight } from 'lucide-react';
+import { Palette, Code, ShoppingCart, Smartphone, Bot, TrendingUp, ArrowRight } from 'lucide-react';
 
 const Services: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -44,6 +44,54 @@ const Services: React.FC = () => {
       gradient: 'from-blue-500 to-cyan-500',
       bgGradient: 'from-blue-500/10 to-cyan-500/10',
       borderGradient: 'border-blue-500/30'
+    },
+    {
+      icon: ShoppingCart,
+      title: 'E-Commerce Solutions',
+      description: 'Create powerful online stores with seamless shopping experiences. From storefronts to inventory management, we build e-commerce platforms that drive sales.',
+      features: [
+        'Custom Storefronts',
+        'Payment Gateway Integration',
+        'Inventory Management',
+        'POS/Cashier System Integration',
+        'Headless Commerce',
+        'Analytics Dashboard'
+      ],
+      gradient: 'from-amber-500 to-orange-500',
+      bgGradient: 'from-amber-500/10 to-orange-500/10',
+      borderGradient: 'border-amber-500/30'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile App Development',
+      description: 'Build high-performance mobile applications that deliver seamless experiences across iOS and Android. We create apps that users love and businesses rely on.',
+      features: [
+        'Native iOS & Android',
+        'Cross-platform Development',
+        'App Store Optimization',
+        'API Integration',
+        'Push Notifications',
+        'Maintenance & Updates'
+      ],
+      gradient: 'from-purple-500 to-violet-500',
+      bgGradient: 'from-purple-500/10 to-violet-500/10',
+      borderGradient: 'border-purple-500/30'
+    },
+    {
+      icon: Bot,
+      title: 'AI Solutions',
+      description: 'Build intelligent autonomous agents that automate workflows, make data-driven decisions, and transform business operations with artificial intelligence.',
+      features: [
+        'Custom AI Assistants',
+        'Workflow Automation',
+        'LLM Integration',
+        'Multi-agent Systems',
+        'Intelligent Chatbots',
+        'Continuous Learning'
+      ],
+      gradient: 'from-indigo-500 to-blue-500',
+      bgGradient: 'from-indigo-500/10 to-blue-500/10',
+      borderGradient: 'border-indigo-500/30'
     },
     {
       icon: TrendingUp,
@@ -127,41 +175,51 @@ const Services: React.FC = () => {
         </div>
 
         {/* Why Choose Us Section */}
-        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-2xl p-8 border border-gray-700">
-          <h3 className="text-3xl font-bold text-center mb-8">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Why Choose DEEPNIX?
-            </span>
-          </h3>
+        <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700 backdrop-blur-sm">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Why Partner with DEEPNIX?
+              </span>
+            </h3>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              We combine technical expertise with business understanding to deliver solutions 
+              that not only work perfectly but also drive real business results.
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold">1</span>
+            {[
+              {
+                title: 'Full-Service Expertise',
+                description: 'End-to-end solutions from design to AI integration',
+                icon: '🔧'
+              },
+              {
+                title: 'Future-Proof Technology',
+                description: 'Cutting-edge solutions with long-term scalability',
+                icon: '🚀'
+              },
+              {
+                title: 'Proven Methodologies',
+                description: 'Agile development with measurable results',
+                icon: '📊'
+              },
+              {
+                title: 'Dedicated Partnership',
+                description: 'Long-term collaboration with continuous support',
+                icon: '🤝'
+              }
+            ].map((item, index) => (
+              <div 
+                key={index} 
+                className="bg-gray-800/30 rounded-xl p-6 hover:bg-gray-800/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="text-3xl mb-4">{item.icon}</div>
+                <h4 className="text-white font-semibold mb-2">{item.title}</h4>
+                <p className="text-gray-400 text-sm">{item.description}</p>
               </div>
-              <h4 className="text-white font-semibold mb-2">Expert Team</h4>
-              <p className="text-gray-400 text-sm">Skilled professionals with years of industry experience</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold">2</span>
-              </div>
-              <h4 className="text-white font-semibold mb-2">Custom Solutions</h4>
-              <p className="text-gray-400 text-sm">Tailored approaches for your unique business needs</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold">3</span>
-              </div>
-              <h4 className="text-white font-semibold mb-2">Quality Assurance</h4>
-              <p className="text-gray-400 text-sm">Rigorous testing and quality control processes</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold">4</span>
-              </div>
-              <h4 className="text-white font-semibold mb-2">Ongoing Support</h4>
-              <p className="text-gray-400 text-sm">Continuous maintenance and support services</p>
-            </div>
+            ))}
           </div>
         </div>
       </div>
