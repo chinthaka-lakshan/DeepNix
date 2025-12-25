@@ -3,7 +3,7 @@ import { Linkedin, Github, Mail } from 'lucide-react';
 import Harith from '../assets/Team/harith.jpeg';
 import Lakshan from '../assets/Team/lakshan.jpeg';
 import Dewaka from '../assets/Team/dewaka.jpg';
-import Rashen from '../assets/Team/rashen.jpeg';
+import Rashen from '../assets/Team/rashen.jpg';
 import Ayodya from '../assets/Team/sheru.jpeg';
 import sachintha from '../assets/Team/sachiya.jpeg';
 import Tharusha from '../assets/Team/tharusha.jpeg';
@@ -11,15 +11,17 @@ import Hasitha from '../assets/Team/hasitha.jpeg';
 import Piyumal from '../assets/Team/piyumal.jpeg';
 import Tharushi from '../assets/Team/tharushi.jpeg';
 import Visal from '../assets/Team/visal.jpeg';
+import Chamika from '../assets/Team/chamika.jpg';
+import Erandi from '../assets/Team/erandi.jpg';
 
 const Team: React.FC = () => {
   const teamMembers = [
     {
       id: 1,
       name: 'Harith Devinda',
-      role: 'CEO & Founder',
+      role: 'Business Strategist & Marketing Leader',
       image: Harith,
-      bio: 'Visionary leader with 10+ years of experience in technology and business strategy.',
+      bio: 'Visionary leader with expertise in customer collaboration and business strategy.',
       skills: ['Strategic Planning', 'Team Leadership', 'Business Development'],
       social: {
         linkedin: '#',
@@ -30,10 +32,10 @@ const Team: React.FC = () => {
     {
       id: 2,
       name: 'Chinthaka Lakshan',
-      role: 'Lead UI/UX Designer',
+      role: 'Lead Backend Developer',
       image: Lakshan,
-      bio: 'Software engineering student with a focus on full-stack web development. Skilled in React, Laravel, and MySQL.',
-      skills: ['UI Design', 'UX Research', 'Prototyping'],
+      bio: 'Lead Backend Developer specializing in building secure, scalable, and efficient server-side systems. He focuses on API development, database design, and system architecture to deliver reliable digital solutions that support business growth and performance.',
+      skills: ['Backend Development', 'Database Design', 'Project Management', 'API Development'],
       social: {
         linkedin: 'https://www.linkedin.com/in/chinthaka-lakshan-97b334263/',
         github: 'https://github.com/chinthaka-lakshan',
@@ -42,32 +44,19 @@ const Team: React.FC = () => {
     },
     {
       id: 3,
-      name: 'Dewaka Pasindu',
-      role: 'Senior Full-Stack Developer',
-      image: Dewaka,
-      bio: 'Expert developer specializing in modern web technologies and scalable solutions.',
-      skills: ['React', 'Node.js', 'Cloud Architecture'],
+      name: 'Sachintha Rashen',
+      role: 'Full Stack Developer & AI/ML Engineer',
+      image: Rashen,
+      bio: 'A strategic architect of digital ecosystems, specializing in full-stack development and applied artificial intelligence. He leverages a meticulous eye for detail and a passion for impactful innovation. His approach is defined by technical leadership and strong collaborative communication.',
+      skills: ['Full-Stack Architecture', 'AI Engineering', 'System Design', 'Technical Leadership'],
       social: {
-        linkedin: 'https://www.linkedin.com/in/dewaka-pasindu-8b147833a/',
-        github: 'https://github.com/DewakaPasindu',
-        email: 'dewakapasindutc@gmail.com'
+        linkedin: '#',
+        github: '#',
+        email: 'srashenb@gmail.com'
       }
     },
     {
       id: 4,
-      name: 'Sachintha Rashen',
-      role: 'Digital Marketing Strategist',
-      image: Rashen,
-      bio: 'Results-driven marketer with expertise in digital campaigns and brand growth.',
-      skills: ['SEO', 'Social Media', 'Content Strategy'],
-      social: {
-        linkedin: '#',
-        github: '#',
-        email: 'emma@deepnix.com'
-      }
-    },
-        {
-      id: 5,
       name: 'Visal Hewage',
       role: 'Frontend Developer',
       image: Visal,
@@ -80,7 +69,33 @@ const Team: React.FC = () => {
       }
     },
     {
+      id: 5,
+      name: 'Dewaka Pasindu',
+      role: 'Senior Full-Stack Developer',
+      image: Dewaka,
+      bio: 'Expert developer specializing in modern web technologies and scalable solutions.',
+      skills: ['React', 'Node.js', 'Cloud Architecture'],
+      social: {
+        linkedin: 'https://www.linkedin.com/in/dewaka-pasindu-8b147833a/',
+        github: 'https://github.com/DewakaPasindu',
+        email: 'dewakapasindutc@gmail.com'
+      }
+    },
+    {
       id: 6,
+      name: 'Chamika Herath',
+      role: 'Senior Full-Stack Developer',
+      image: Chamika,
+      bio: 'Expert developer specializing in modern web technologies and scalable solutions.',
+      skills: ['React', 'Node.js', 'Cloud Architecture'],
+      social: {
+        linkedin: 'https://www.linkedin.com/in/dewaka-pasindu-8b147833a/',
+        github: 'https://github.com/DewakaPasindu',
+        email: 'dewakapasindutc@gmail.com'
+      }
+    },
+    {
+      id: 7,
       name: 'Ayodya Senevirathne',
       role: 'Frontend Developer',
       image: Ayodya,
@@ -93,7 +108,7 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 7,
+      id: 8,
       name: 'Sachintha Jayaweera',
       role: 'Backend Developer',
       image: sachintha,
@@ -106,7 +121,7 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 8,
+      id: 9,
       name: 'Tharusha Ishan',
       role: 'DevOps Engineer',
       image: Tharusha,
@@ -119,7 +134,7 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 9,
+      id: 10,
       name: 'Hasitha Wijewardhana',
       role: 'Product Manager',
       image: Hasitha,
@@ -132,7 +147,20 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 10,
+      id: 11,
+      name: 'Yashodha Shyaminda',
+      role: 'Product Manager',
+      image: Hasitha,
+      bio: 'Strategic product leader driving innovation and user-centered solutions.',
+      skills: ['Product Strategy', 'Agile', 'User Research'],
+      social: {
+        linkedin: '#',
+        github: '#',
+        email: 'maria@deepnix.com'
+      }
+    },
+    {
+      id: 12,
       name: 'Piyumal Pahasara',
       role: 'QA Engineer',
       image: Piyumal,
@@ -146,10 +174,36 @@ const Team: React.FC = () => {
       }
     },
     {
-      id: 11,
+      id: 13,
       name: 'Tharushi Senevirathne',
       role: 'Content Strategist',
       image: Tharushi,
+      bio: 'Creative content expert crafting compelling narratives and brand stories.',
+      skills: ['Content Writing', 'Brand Strategy', 'Copywriting'],
+      social: {
+        linkedin: '#',
+        github: '#',
+        email: 'sophie@deepnix.com'
+      }
+    },
+    {
+      id: 14,
+      name: 'Ravindu Siriwardhana',
+      role: 'Content Strategist',
+      image: Chamika,
+      bio: 'Creative content expert crafting compelling narratives and brand stories.',
+      skills: ['Content Writing', 'Brand Strategy', 'Copywriting'],
+      social: {
+        linkedin: '#',
+        github: '#',
+        email: 'sophie@deepnix.com'
+      }
+    },
+    {
+      id: 15,
+      name: 'Erandi Alahakoon',
+      role: 'Frontend Developer',
+      image: Erandi,
       bio: 'Creative content expert crafting compelling narratives and brand stories.',
       skills: ['Content Writing', 'Brand Strategy', 'Copywriting'],
       social: {
