@@ -13,6 +13,7 @@ import Tharushi from '../assets/Team/tharushi.jpeg';
 import Visal from '../assets/Team/visal.jpeg';
 import Chamika from '../assets/Team/chamika.jpg';
 import Erandi from '../assets/Team/erandi.jpg';
+import Yashodha from '../assets/Team/yshodha.jpeg';
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -21,7 +22,7 @@ const Team: React.FC = () => {
       name: 'Harith Devinda',
       role: 'Business Strategist & Marketing Leader',
       image: Harith,
-      bio: 'Visionary leader with expertise in customer collaboration and business strategy.',
+      bio: 'Full-Stack Software Engineer with expertise in UI/UX design, front-end and back-end development, and technical documentation. Experienced in building responsive interfaces, developing APIs, managing databases, and delivering well-structured, maintainable systems. .',
       skills: ['Strategic Planning', 'Team Leadership', 'Business Development'],
       social: {
         linkedin: '#',
@@ -73,7 +74,7 @@ const Team: React.FC = () => {
       name: 'Dewaka Pasindu',
       role: 'Senior Full-Stack Developer',
       image: Dewaka,
-      bio: 'Expert developer specializing in modern web technologies and scalable solutions.',
+      bio: 'Full-Stack Software Engineer with expertise in UI/UX design, front-end and back-end development, and technical documentation. Experienced in building responsive interfaces, developing APIs, managing databases, and delivering well-structured, maintainable systems. ',
       skills: ['React', 'Node.js', 'Cloud Architecture'],
       social: {
         linkedin: 'https://www.linkedin.com/in/dewaka-pasindu-8b147833a/',
@@ -99,7 +100,7 @@ const Team: React.FC = () => {
       name: 'Ayodya Senevirathne',
       role: 'Frontend Developer',
       image: Ayodya,
-      bio: 'undergraduate Software Engineer with a strong passion for crafting clean, user-friendly digital experiences. My role is UI/UX designer and front-end developer, combining creativity with code to bring intuitive and visually engaging interfaces to life. I love turning ideas into interactive and responsive designs that users enjoy.',
+      bio: 'UI/UX Designer and Front-End Developer passionate about transforming ideas into intuitive, visually engaging, and responsive digital experiences.',
       skills: ['React', 'TypeScript', 'CSS Animations'],
       social: {
         linkedin: 'https://www.linkedin.com/in/ayodya-senavirathne-a15839316/',
@@ -150,7 +151,7 @@ const Team: React.FC = () => {
       id: 11,
       name: 'Yashodha Shyaminda',
       role: 'Product Manager',
-      image: Hasitha,
+      image: Yashodha,
       bio: 'Strategic product leader driving innovation and user-centered solutions.',
       skills: ['Product Strategy', 'Agile', 'User Research'],
       social: {
@@ -178,7 +179,7 @@ const Team: React.FC = () => {
       name: 'Tharushi Senevirathne',
       role: 'Content Strategist',
       image: Tharushi,
-      bio: 'Creative content expert crafting compelling narratives and brand stories.',
+      bio: 'Software Engineer specializing in UI/UX design and front-end development, with strong documentation skills and a focus on creating clean, intuitive, and user-friendly digital experiences',
       skills: ['Content Writing', 'Brand Strategy', 'Copywriting'],
       social: {
         linkedin: '#',
@@ -186,19 +187,19 @@ const Team: React.FC = () => {
         email: 'sophie@deepnix.com'
       }
     },
-    {
-      id: 14,
-      name: 'Ravindu Siriwardhana',
-      role: 'Content Strategist',
-      image: Chamika,
-      bio: 'Creative content expert crafting compelling narratives and brand stories.',
-      skills: ['Content Writing', 'Brand Strategy', 'Copywriting'],
-      social: {
-        linkedin: '#',
-        github: '#',
-        email: 'sophie@deepnix.com'
-      }
-    },
+    // {
+    //   id: 14,
+    //   name: 'Ravindu Siriwardhana',
+    //   role: 'Content Strategist',
+    //   image: Chamika,
+    //   bio: 'Creative content expert crafting compelling narratives and brand stories.',
+    //   skills: ['Content Writing', 'Brand Strategy', 'Copywriting'],
+    //   social: {
+    //     linkedin: '#',
+    //     github: '#',
+    //     email: 'sophie@deepnix.com'
+    //   }
+    // },
     {
       id: 15,
       name: 'Erandi Alahakoon',
