@@ -87,7 +87,7 @@ const Team: React.FC = () => {
       name: 'Chamika Herath',
       role: 'Senior Full-Stack Developer',
       image: Chamika,
-      bio: 'Expert developer specializing in modern web technologies and scalable solutions.',
+      bio: 'Fullstack Engineer focused on backend excellence. Expert at architecting RESTful APIs and modernizing tech stacks. Bridges the gap between complex infrastructure and seamless user experiences.',
       skills: ['React', 'Node.js', 'Cloud Architecture'],
       social: {
         linkedin: 'https://www.linkedin.com/in/chamikaherath/',
