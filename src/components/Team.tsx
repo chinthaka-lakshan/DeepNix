@@ -87,7 +87,7 @@ const Team: React.FC = () => {
       name: 'Chamika Herath',
       role: 'Senior Full-Stack Developer',
       image: Chamika,
-      bio: 'Expert developer specializing in modern web technologies and scalable solutions.',
+      bio: 'Fullstack Engineer focused on backend excellence. Expert at architecting RESTful APIs and modernizing tech stacks. Bridges the gap between complex infrastructure and seamless user experiences.',
       skills: ['React', 'Node.js', 'Cloud Architecture'],
       social: {
         linkedin: 'https://www.linkedin.com/in/chamikaherath/',
@@ -139,11 +139,11 @@ const Team: React.FC = () => {
       name: 'Hasitha Wijewardhana',
       role: 'Product Manager',
       image: Hasitha,
-      bio: 'Strategic product leader driving innovation and user-centered solutions.',
+      bio: 'Full stack developer with strong frontend expertise in React JS & Vue JS and Mobile Development technologies like Kotlin, Flutter. etc. Dives deep into real world problems and figures out how to implement modern technologies.',
       skills: ['Product Strategy', 'Agile', 'User Research'],
       social: {
-        linkedin: '#',
-        github: '#',
+        linkedin: 'https://lk.linkedin.com/in/hasitha-wijewardhana-72898831b',
+        github: 'https://github.com/HasithaDilshan19',
         email: 'maria@deepnix.com'
       }
     },
