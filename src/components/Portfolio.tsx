@@ -4,6 +4,8 @@ import Atharaman from '../assets/atharaman.png';
 import ymproducts from '../assets/ymproducts.png';
 import CyberMall from '../assets/CyberMall.png';
 import autoDocImg from '../assets/autodoc.png';
+import Wetez from '../assets/wetez.png';
+import travelcompass from '../assets/travelcompass logo.png';
 
 const Portfolio: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -67,20 +69,18 @@ const Portfolio: React.FC = () => {
       category: 'Web Development',
       description:
         'Travel Compass, a smart and user-friendly travel planning platform. Our goal is to help travelers easily plan trips based on their budget, while also giving hotels, guides, and vehicle rental services a space to connect with users. The most exciting part is Our platform uses AI to recommend the best travel packages based on each traveler’s needs.',
-      image:
-        'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: travelcompass,
       technologies: ['React.js', 'Spring Boot','Python', 'MySQL'],
       gradient: 'from-orange-500 to-red-500',
     },
     {
       id: 6,
-      title: 'Social Media Growth',
-      category: 'Digital Marketing',
+      title: 'WetEZ',
+      category: 'Web Development',
       description:
-        'A social media strategy that increased follower base by 500% and engagement rates by 250%.',
-      image:
-        'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Instagram', 'TikTok', 'SEO', 'Analytics'],
+        'VetEZ is a software application designed to streamline operations and enhance pet vaccination management within veterinary clinics. It aims to offer a user-friendly and comprehensive platform that simplifies administrative tasks, improves communication with pet owners, and ultimately contributes to better pet health outcomes.',
+      image: Wetez,
+      technologies: ['React.js','HTML','CSS','Express.js','Node.js', 'MySQL'],
       gradient: 'from-pink-500 to-rose-500',
     },
   ];
