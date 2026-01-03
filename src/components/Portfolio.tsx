@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import Atharaman from '../assets/atharaman.png';
 import ymproducts from '../assets/ymproducts.png';
 import CyberMall from '../assets/CyberMall.png';
-import AutoDOC from '../assets/AutoDOC.png';
+import autoDocImg from '../assets/AutoDOC.png';
 
 const Portfolio: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -56,7 +56,7 @@ const Portfolio: React.FC = () => {
       category: 'Web Development',
       description:
         'A digital platform for booking, tracking, and managing vehicle maintenance and repair services. Improves customer experience and workshop productivity.',
-      image: AutoDOC,
+      image: autoDocImg,
       technologies: ['React.js', 'Node.js', 'MySQL'],
       gradient: 'from-orange-500 to-red-500',
       link: 'https://sachinthajayaweera.github.io/autodoc/',
