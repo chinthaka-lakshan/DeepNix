@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import Atharaman from '../assets/atharaman.png';
 import ymproducts from '../assets/ymproducts.png';
 import CyberMall from '../assets/CyberMall.png';
-import autoDocImg from '../assets/AutoDOC.png';
+import autoDocImg from '../assets/autoDocImg.png';
 
 const Portfolio: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
