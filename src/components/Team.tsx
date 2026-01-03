@@ -113,7 +113,7 @@ const Team: React.FC = () => {
       name: 'Sachintha Jayaweera',
       role: 'Backend Developer',
       image: sachintha,
-      bio: 'A highly motivated and detail-oriented Software Engineering undergraduate with strong skills in full-stack web development, including ReactJs, NodeJs, Spring Boot and MySQL. Experienced in developing user-centric applications and managing end-to-end project lifecycles. Passionate about solving real-world problems through technology and continuously improving both technical and soft skills.',
+      bio: 'Full Stack Developer skilled in React.js, Node.js, Spring Boot, Python, and MySQL, with experience building user-centric applications and delivering end-to-end solutions. Passionate about solving real-world problems through clean, scalable technology and continuous professional growth.',
       skills: ['Python', 'Django', 'PostgreSQL'],
       social: {
         linkedin: 'https://www.linkedin.com/in/sachintha-jayaweera-057587320/',

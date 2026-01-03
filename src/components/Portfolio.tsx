@@ -1,16 +1,18 @@
 import React from 'react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+
 import Atharaman from '../assets/atharaman.png';
 import ymproducts from '../assets/ymproducts.png';
 import CyberMall from '../assets/CyberMall.png';
+import AutoDOC from '../assets/AutoDOC.png';
 
 const Portfolio: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ 
+      element.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'start',
       });
     }
   };
@@ -18,126 +20,126 @@ const Portfolio: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'full-stack web platform',
+      title: 'Full-Stack Web Platform',
       category: 'Web Development',
-      description: 'A full-stack web platform designed to connect travelers with local guidesand shop owners across Sri Lanka. It features user registration, requesthandling, location viewing, and review management, creating a seamlesstravel coordination experience.',
+      description:
+        'A full-stack web platform designed to connect travelers with local guides and shop owners across Sri Lanka. Features include user registration, request handling, location viewing, and review management.',
       image: Atharaman,
-      technologies: ['React', 'Spring Boot', 'MYSQL'],
-      gradient: 'from-blue-500 to-cyan-500'
+      technologies: ['React', 'Spring Boot', 'MySQL'],
+      gradient: 'from-blue-500 to-cyan-500',
+      link: 'https://atharamanproject.netlify.app/',
     },
     {
       id: 2,
-      title: 'PRODUCTSYM Products Distribution System',
+      title: 'YM Products Distribution System',
       category: 'Web Development',
-      description: 'A distribution management system designed to enhance product deliveryand inventory tracking. The system ensures operational efficiency andcustomer satisfaction through streamlined ordering and trackingfunctionalities.',
+      description:
+        'A distribution management system designed to enhance product delivery and inventory tracking, ensuring operational efficiency and customer satisfaction.',
       image: ymproducts,
       technologies: ['Figma', 'React Native', 'Firebase', 'WebRTC'],
-      gradient: 'from-blue-500 to-cyan-500'
+      gradient: 'from-blue-500 to-cyan-500',
+      link: 'http://ymproducts.netlify.app/',
     },
     {
       id: 3,
       title: 'CyberMall E-commerce Platform',
       category: 'Web Development',
-      description: 'An online shopping platform that supports multiple vendors and a widerange of products. Key features include user-friendly navigation, ordertracking, and secure, role-based access control for admins andcustomers.',
+      description:
+        'An online shopping platform supporting multiple vendors with user-friendly navigation, order tracking, and secure role-based access.',
       image: CyberMall,
-      technologies: ['Google Ads', 'Facebook Ads', 'SEO', 'Analytics'],
-      gradient: 'from-blue-500 to-cyan-500'
+      technologies: ['React', 'Node.js', 'MySQL'],
+      gradient: 'from-blue-500 to-cyan-500',
+      link: 'https://cybermallsystem.netlify.app/',
     },
     {
       id: 4,
-      title: 'Real Estate Platform',
+      title: 'AutoDOC',
       category: 'Web Development',
-      description: 'Modern real estate platform with property listings, virtual tours, mortgage calculator, and advanced search filters.',
-      image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Vue.js', 'Laravel', 'MySQL', 'Google Maps'],
-      gradient: 'from-orange-500 to-red-500'
+      description:
+        'A digital platform for booking, tracking, and managing vehicle maintenance and repair services. Improves customer experience and workshop productivity.',
+      image: AutoDOC,
+      technologies: ['React.js', 'Node.js', 'MySQL'],
+      gradient: 'from-orange-500 to-red-500',
+      link: 'https://sachinthajayaweera.github.io/autodoc/',
     },
     {
       id: 5,
-      title: 'SaaS Dashboard Design',
-      category: 'UI/UX Design',
-      description: 'Intuitive dashboard design for a SaaS platform with complex data visualization, user management, and reporting features.',
-      image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Sketch', 'Principle', 'Zeplin', 'InVision'],
-      gradient: 'from-indigo-500 to-purple-500'
+      title: 'Travel Compass',
+      category: 'Web Development',
+      description:
+        'Travel Compass, a smart and user-friendly travel planning platform. Our goal is to help travelers easily plan trips based on their budget, while also giving hotels, guides, and vehicle rental services a space to connect with users. The most exciting part is Our platform uses AI to recommend the best travel packages based on each traveler’s needs.',
+      image:
+        'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['React.js', 'Spring Boot','Python', 'MySQL'],
+      gradient: 'from-orange-500 to-red-500',
     },
     {
       id: 6,
       title: 'Social Media Growth',
       category: 'Digital Marketing',
-      description: 'Comprehensive social media strategy that grew follower base by 500% and increased engagement rates by 250%.',
-      image: 'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Instagram', 'TikTok', 'Content Strategy', 'Influencer Marketing'],
-      gradient: 'from-pink-500 to-rose-500'
-    }
+      description:
+        'A social media strategy that increased follower base by 500% and engagement rates by 250%.',
+      image:
+        'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Instagram', 'TikTok', 'SEO', 'Analytics'],
+      gradient: 'from-pink-500 to-rose-500',
+    },
   ];
 
   return (
     <section id="portfolio" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
+
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Our Portfolio
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Explore our latest projects and see how we've helped businesses transform 
-            their digital presence and achieve remarkable growth.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our latest projects and see how we transform ideas into powerful digital solutions.
           </p>
         </div>
 
-        {/* Portfolio Grid */}
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl"
+              className="group bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-all duration-500 hover:scale-105"
             >
-              {/* Project Image */}
+              {/* Image */}
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex space-x-2">
-                    <button className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/30 transition-colors duration-300">
-                      <ExternalLink className="h-5 w-5 text-white" />
-                    </button>
-                    <button className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/30 transition-colors duration-300">
-                      <Github className="h-5 w-5 text-white" />
-                    </button>
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               </div>
 
-              {/* Project Content */}
+              {/* Content */}
               <div className="p-6">
-                {/* Category Badge */}
-                <div className={`inline-block bg-gradient-to-r ${project.gradient} text-white text-xs font-medium px-3 py-1 rounded-full mb-3`}>
+                <span
+                  className={`inline-block bg-gradient-to-r ${project.gradient} text-white text-xs px-3 py-1 rounded-full mb-3`}
+                >
                   {project.category}
-                </div>
+                </span>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {project.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                <p className="text-gray-400 text-sm mb-4">
                   {project.description}
                 </p>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="bg-gray-700/50 text-gray-300 text-xs px-2 py-1 rounded border border-gray-600"
+                      className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded"
                     >
                       {tech}
                     </span>
@@ -145,32 +147,38 @@ const Portfolio: React.FC = () => {
                 </div>
 
                 {/* View Project Button */}
-                <button className="group/btn flex items-center space-x-2 text-blue-400 hover:text-cyan-400 font-medium text-sm transition-colors duration-300">
-                  <span>View Project</span>
-                  <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                </button>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-400 hover:text-cyan-400 transition"
+                  >
+                    View Project
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl p-12 border border-blue-500/20">
+        {/* CTA */}
+        <div className="text-center bg-gradient-to-r from-blue-500/10 to-cyan-500/10 p-12 rounded-2xl">
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Start Your Project?
           </h3>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's collaborate to bring your vision to life. Our team is ready to deliver 
-            exceptional results that exceed your expectations.
+          <p className="text-gray-300 mb-8">
+            Let’s build something amazing together.
           </p>
           <button
             onClick={() => scrollToSection('contact')}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            className="bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-4 rounded-lg text-white hover:scale-105 transition"
           >
-            <span>Start Your Project</span>
-            <ArrowRight className="h-5 w-5" />
+            Start Your Project
           </button>
         </div>
+
       </div>
     </section>
   );
