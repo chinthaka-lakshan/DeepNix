@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import BackgroundAnimation from './BackgroundAnimation';
+import Footer from './Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -149,24 +150,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 bg-gray-900/90 backdrop-blur-md border-t border-gray-800 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center flex flex-col items-center">
-            <motion.img
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              src="/DeepNixx.jpeg"
-              alt="DEEPNIX"
-              className="h-10 w-auto rounded-md object-contain transition-transform duration-300"
-              onError={(e) => {
-                console.error("Logo failed to load. Check if DeepNixx.jpeg is in the public folder.");
-              }}
-            />
-            <p className="text-gray-400 text-sm mt-4">
-              © 2025 DEEPNIX. All rights reserved. Transforming businesses through innovative technology solutions.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

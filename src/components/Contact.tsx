@@ -341,37 +341,7 @@ const Contact: React.FC = () => {
             {/* Divider */}
             <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-            {/* Social Media */}
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Follow Us</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Stay connected with us on social media for the latest updates and insights.
-              </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {socialLinks.map((social) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <motion.a
-                      key={social.name}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ y: -5 }}
-                      className={`flex flex-col items-center justify-center gap-2 bg-black/20 border border-white/5 ${social.color} p-4 rounded-xl transition-all duration-300 group`}
-                    >
-                      <div className="p-2 rounded-full bg-white/5 group-hover:bg-white/20 transition-colors">
-                        <IconComponent className="h-5 w-5" />
-                      </div>
-                      <span className="text-sm font-medium text-gray-300 group-hover:text-white">{social.name}</span>
-                    </motion.a>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Divider */}
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
             {/* Business Hours */}
             <div>
