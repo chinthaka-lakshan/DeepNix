@@ -121,14 +121,14 @@ const About: React.FC = () => {
           className="mb-32 relative"
         >
           {/* Decorative Glow */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition duration-1000" />
+          <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition duration-1000" />
 
           <div className="relative rounded-[2rem] bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-14 overflow-hidden shadow-2xl">
             {/* Noise Texture */}
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light" />
 
             {/* Subtle Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-cyan-500/10" />
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
               <div className="space-y-8">
@@ -159,7 +159,7 @@ const About: React.FC = () => {
                     <h3 className="text-sm font-bold tracking-widest text-cyan-400 uppercase">Our Vision</h3>
                   </div>
                   <h4 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
-                    Shaping the <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Future</span>
+                    Shaping the <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Future</span>
                   </h4>
                   <p className="text-gray-300 leading-relaxed text-lg border-l-2 border-cyan-500/30 pl-6">
                     Today, we push boundaries, embrace emerging technologies, and delivery

@@ -130,7 +130,7 @@ const Portfolio: React.FC = () => {
             </div>
             <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
               Selected <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 Works.
               </span>
             </h2>
