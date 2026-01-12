@@ -1,35 +1,30 @@
 import React from 'react';
-import { Linkedin, Github, Mail } from 'lucide-react';
+import { Linkedin, Github, Mail, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Harith from '../assets/Team/harith.jpeg';
 import Lakshan from '../assets/Team/lakshan.jpeg';
-import Dewaka from '../assets/Team/dewaka.jpg';
 import Rashen from '../assets/Team/rashen.jpg';
+import Visal from '../assets/Team/visal.jpeg';
+import Dewaka from '../assets/Team/dewaka.jpg';
+import Chamika from '../assets/Team/chamika.jpg';
 import Ayodya from '../assets/Team/sheru.jpeg';
-import sachintha from '../assets/Team/sachiya.jpeg';
+import Sachintha from '../assets/Team/sachiya.jpeg';
 import Tharusha from '../assets/Team/tharusha.jpeg';
 import Hasitha from '../assets/Team/hasitha.jpeg';
+import Yashodha from '../assets/Team/yshodha.jpeg';
 import Piyumal from '../assets/Team/piyumal.jpeg';
 import Tharushi from '../assets/Team/tharushi.jpeg';
-import Visal from '../assets/Team/visal.jpeg';
-import Chamika from '../assets/Team/chamika.jpg';
 import Erandi from '../assets/Team/erandi.jpg';
-import Yashodha from '../assets/Team/yshodha.jpeg';
 
 const Team: React.FC = () => {
   const teamMembers = [
     {
       id: 1,
       name: 'Harith Devinda',
-      role: 'Business Strategist & Marketing Leader',
+      role: 'Full-Stack Software Engineer',
       image: Harith,
-      bio: 'Full-Stack Software Engineer with expertise in UI/UX design, front-end and back-end development, and technical documentation. Experienced in building responsive interfaces, developing APIs, managing databases, and delivering well-structured, maintainable systems. .',
-      skills: ['Strategic Planning', 'Team Leadership', 'Business Development'],
-      social: {
-        linkedin: '#',
-        github: '#',
-        email: 'alex@deepnix.com'
-      }
+      bio: 'Full-Stack Software Engineer with expertise in UI/UX design, front-end and back-end development, and technical documentation. Experienced in building responsive interfaces, developing APIs, managing databases, and delivering well-structured, maintainable systems.',
+      social: { linkedin: '#', github: '#', email: 'alex@deepnix.com' }
     },
     {
       id: 2,
@@ -37,12 +32,7 @@ const Team: React.FC = () => {
       role: 'Lead Backend Developer',
       image: Lakshan,
       bio: 'Lead Backend Developer specializing in building secure, scalable, and efficient server-side systems. He focuses on API development, database design, and system architecture to deliver reliable digital solutions that support business growth and performance.',
-      skills: ['Backend Development', 'Database Design', 'Project Management', 'API Development'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/chinthaka-lakshan-97b334263/',
-        github: 'https://github.com/chinthaka-lakshan',
-        email: 'diluklakshan01@gamil.com'
-      }
+      social: { linkedin: 'https://www.linkedin.com/in/chinthaka-lakshan-97b334263/', github: 'https://github.com/chinthaka-lakshan', email: 'diluklakshan01@gamil.com' }
     },
     {
       id: 3,
@@ -50,169 +40,95 @@ const Team: React.FC = () => {
       role: 'Full Stack Developer & AI/ML Engineer',
       image: Rashen,
       bio: 'A strategic architect of digital ecosystems, specializing in full-stack development and applied artificial intelligence. He leverages a meticulous eye for detail and a passion for impactful innovation. His approach is defined by technical leadership and strong collaborative communication.',
-      skills: ['Full-Stack Architecture', 'AI Engineering', 'System Design', 'Technical Leadership'],
-      social: {
-        linkedin: '#',
-        github: 'https://github.com/SachinthaRashen',
-        email: 'srashenb@gmail.com'
-      }
+      social: { linkedin: '#', github: 'https://github.com/SachinthaRashen', email: 'srashenb@gmail.com' }
     },
     {
       id: 4,
       name: 'Visal Hewage',
-      role: 'Frontend Developer',
+      role: 'Fullstack Software Engineer',
       image: Visal,
       bio: 'Fullstack Software Engineer specializing in Python, AI, and the MERN stack (React, Node.js). I combine front-end creativity with backend expertise to design and develop clean, user-centric, and responsive digital products.',
-      skills: ['React', 'TypeScript', 'CSS Animations'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/visal-hewage/',
-        github: 'https://github.com/Visal2000',
-        email: 'ayodyasewmini2001@gmail.com'
-      }
+      social: { linkedin: 'https://www.linkedin.com/in/visal-hewage/', github: 'https://github.com/Visal2000', email: 'ayodyasewmini2001@gmail.com' }
     },
     {
       id: 5,
       name: 'Dewaka Pasindu',
-      role: 'Senior Full-Stack Developer',
+      role: 'Full-Stack Software Engineer',
       image: Dewaka,
-      bio: 'Full-Stack Software Engineer with expertise in UI/UX design, front-end and back-end development, and technical documentation. Experienced in building responsive interfaces, developing APIs, managing databases, and delivering well-structured, maintainable systems. ',
-      skills: ['React', 'Node.js', 'Cloud Architecture'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/dewaka-pasindu-8b147833a/',
-        github: 'https://github.com/DewakaPasindu',
-        email: 'dewakapasindutc@gmail.com'
-      }
+      bio: 'Full-Stack Software Engineer with expertise in UI/UX design, front-end and back-end development, and technical documentation. Experienced in building responsive interfaces, developing APIs, managing databases, and delivering well-structured, maintainable systems.',
+      social: { linkedin: 'https://www.linkedin.com/in/dewaka-pasindu-8b147833a/', github: 'https://github.com/DewakaPasindu', email: 'dewakapasindutc@gmail.com' }
     },
     {
       id: 6,
       name: 'Chamika Herath',
-      role: 'Senior Full-Stack Developer',
+      role: 'Fullstack Engineer',
       image: Chamika,
       bio: 'Fullstack Engineer focused on backend excellence. Expert at architecting RESTful APIs and modernizing tech stacks. Bridges the gap between complex infrastructure and seamless user experiences.',
-      skills: ['React', 'Node.js', 'Cloud Architecture'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/chamikaherath/',
-        github: 'https://github.com/Chamika-Herath',
-        email: 'dewakapasindutc@gmail.com'
-      }
+      social: { linkedin: 'https://www.linkedin.com/in/chamikaherath/', github: 'https://github.com/Chamika-Herath', email: 'dewakapasindutc@gmail.com' }
     },
     {
       id: 7,
       name: 'Ayodya Senevirathne',
-      role: 'Frontend Developer',
+      role: 'UI/UX Designer & Frontend Dev',
       image: Ayodya,
       bio: 'UI/UX Designer and Front-End Developer passionate about transforming ideas into intuitive, visually engaging, and responsive digital experiences.',
-      skills: ['React', 'TypeScript', 'CSS Animations'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/ayodya-senavirathne-a15839316/',
-        github: 'https://github.com/ayodyasenavirathne',
-        email: 'ayodyasewmini2001@gmail.com'
-      }
+      social: { linkedin: 'https://www.linkedin.com/in/ayodya-senavirathne-a15839316/', github: 'https://github.com/ayodyasenavirathne', email: 'ayodyasewmini2001@gmail.com' }
     },
     {
       id: 8,
       name: 'Sachintha Jayaweera',
-      role: 'Backend Developer',
-      image: sachintha,
-      bio: 'Full Stack Developer skilled in React.js, Node.js, Spring Boot, Python, and MySQL, with experience building user-centric applications and delivering end-to-end solutions. Passionate about solving real-world problems through clean, scalable technology and continuous professional growth.',
-      skills: ['Python', 'Django', 'PostgreSQL'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/sachintha-jayaweera-057587320/',
-        github: 'https://github.com/Sachinthajayaweera',
-        email: 'sachinthajayaweera2@gmail.com'
-      }
+      role: 'Full Stack Developer',
+      image: Sachintha,
+      bio: 'Full Stack Developer skilled in React.js, Node.js, Spring Boot, Python, and MySQL, with experience building user-centric applications and delivering end-to-end solutions. Passionate about solving real-world problems through clean, scalable technology.',
+      social: { linkedin: 'https://www.linkedin.com/in/sachintha-jayaweera-057587320/', github: 'https://github.com/Sachinthajayaweera', email: 'sachinthajayaweera2@gmail.com' }
     },
     {
       id: 9,
       name: 'Tharusha Ishan',
-      role: 'DevOps Engineer',
+      role: 'Software Engineering Student',
       image: Tharusha,
       bio: 'Software engineering student specializing in full-stack web development. Proficient in React.js, Node.js, Spring Boot, and MySQL.',
-      skills: ['AWS', 'Docker', 'Kubernetes'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/tharusha-ishan-5b438431b',
-        github: 'https://github.com/Tharusha-Ishan',
-        email: ' tharu553edu@gmail.com'
-      }
+      social: { linkedin: 'https://www.linkedin.com/in/tharusha-ishan-5b438431b', github: 'https://github.com/Tharusha-Ishan', email: ' tharu553edu@gmail.com' }
     },
     {
       id: 10,
       name: 'Hasitha Wijewardhana',
-      role: 'Product Manager',
+      role: 'Full Stack Developer',
       image: Hasitha,
       bio: 'Full stack developer with strong frontend expertise in React JS & Vue JS and Mobile Development technologies like Kotlin, Flutter. etc. Dives deep into real world problems and figures out how to implement modern technologies.',
-      skills: ['Product Strategy', 'Agile', 'User Research'],
-      social: {
-        linkedin: 'https://lk.linkedin.com/in/hasitha-wijewardhana-72898831b',
-        github: 'https://github.com/HasithaDilshan19',
-        email: 'maria@deepnix.com'
-      }
+      social: { linkedin: 'https://lk.linkedin.com/in/hasitha-wijewardhana-72898831b', github: 'https://github.com/HasithaDilshan19', email: 'maria@deepnix.com' }
     },
     {
       id: 11,
       name: 'Yashodha Shyaminda',
-      role: 'Product Manager',
+      role: 'Strategic Product Leader',
       image: Yashodha,
       bio: 'Strategic product leader driving innovation and user-centered solutions.',
-      skills: ['Product Strategy', 'Agile', 'User Research'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/yashodashyaminda',
-        github: '#',
-        email: 'maria@deepnix.com'
-      }
+      social: { linkedin: 'https://www.linkedin.com/in/yashodashyaminda', github: '#', email: 'maria@deepnix.com' }
     },
     {
       id: 12,
       name: 'Piyumal Pahasara',
-      role: 'QA Engineer',
+      role: 'Quality Assurance Specialist',
       image: Piyumal,
       bio: 'Quality assurance specialist ensuring flawless software delivery.',
-      skills: ['Test Automation', 'Manual Testing', 'Performance Testing'],
-      social: {
-        linkedin: '#',
-        github: '#',
-
-        email: 'ryan@deepnix.com'
-      }
+      social: { linkedin: '#', github: '#', email: 'ryan@deepnix.com' }
     },
     {
       id: 13,
       name: 'Tharushi Senevirathne',
-      role: 'Content Strategist',
+      role: 'Software Engineer',
       image: Tharushi,
       bio: 'Software Engineer specializing in UI/UX design and front-end development, with strong documentation skills and a focus on creating clean, intuitive, and user-friendly digital experiences',
-      skills: ['Content Writing', 'Brand Strategy', 'Copywriting'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/tharushi-seneviratne-332b542a2/',
-        github: 'https://github.com/Tharushi0925',
-        email: 'sophie@deepnix.com'
-      }
+      social: { linkedin: 'https://www.linkedin.com/in/tharushi-seneviratne-332b542a2/', github: 'https://github.com/Tharushi0925', email: 'sophie@deepnix.com' }
     },
-    // {
-    //   id: 14,
-    //   name: 'Ravindu Siriwardhana',
-    //   role: 'Content Strategist',
-    //   image: Chamika,
-    //   bio: 'Creative content expert crafting compelling narratives and brand stories.',
-    //   skills: ['Content Writing', 'Brand Strategy', 'Copywriting'],
-    //   social: {
-    //     linkedin: '#',
-    //     github: '#',
-    //     email: 'sophie@deepnix.com'
-    //   }
-    // },
     {
-      id: 15,
+      id: 99, // Updated ID to force re-render
       name: 'Erandi Alahakoon',
-      role: 'Frontend Developer',
+      role: 'Creative Content Expert',
       image: Erandi,
       bio: 'Creative content expert crafting compelling narratives and brand stories.',
-      skills: ['Content Writing', 'Brand Strategy', 'Copywriting'],
-      social: {
-        linkedin: '#',
-        github: '#',
-        email: 'sophie@deepnix.com'
-      }
+      social: { linkedin: '#', github: '#', email: 'sophie@deepnix.com' }
     }
   ];
 
@@ -227,12 +143,12 @@ const Team: React.FC = () => {
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
   };
 
   return (
-    <section id="team" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+    <section id="team" className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 bg-black/20">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <motion.div
@@ -240,16 +156,18 @@ const Team: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Meet Our Team
-            </span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+            <Globe size={14} className="text-blue-400" />
+            <span className="text-xs font-medium text-blue-300 tracking-wide uppercase">Our Experts</span>
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+            Meet the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Legends.</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Our diverse team of experts brings together creativity, technical excellence,
-            and strategic thinking to deliver exceptional results for every project.
+            and strategic thinking to deliver exceptional results.
           </p>
         </motion.div>
 
@@ -259,127 +177,89 @@ const Team: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
           {teamMembers.map((member) => (
             <motion.div
               key={member.id}
               variants={cardVariants}
-              whileHover={{ y: -10 }}
-              className="group bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-all duration-300 shadow-lg"
+              whileHover={{ y: -8 }}
+              className="group bg-gray-900/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/5 hover:border-blue-500/30 transition-all duration-300 flex flex-col h-full"
             >
-              {/* Member Image */}
-              <div className="relative overflow-hidden">
+              {/* Member Image Area */}
+              <div className="relative aspect-[4/5] overflow-hidden bg-gray-800">
                 <motion.img
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.5 }}
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                {/* Social Links */}
-                <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex justify-center space-x-3">
+                {/* Floating Socials */}
+                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-gray-900/90 to-transparent flex justify-center gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                  {member.social.linkedin && member.social.linkedin !== '#' && (
                     <a
                       href={member.social.linkedin}
-                      className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-blue-500 transition-colors duration-300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white hover:bg-white hover:text-[#0077b5] hover:border-white transition-all duration-300 shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1"
                     >
-                      <Linkedin className="h-4 w-4 text-white" />
+                      <Linkedin size={20} />
                     </a>
+                  )}
+                  {member.social.github && member.social.github !== '#' && (
                     <a
                       href={member.social.github}
-                      className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-gray-700 transition-colors duration-300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300 shadow-lg hover:shadow-white/20 hover:-translate-y-1"
                     >
-                      <Github className="h-4 w-4 text-white" />
+                      <Github size={20} />
                     </a>
-                    {/* <a
-                      href={member.social.twitter}
-                      className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-blue-400 transition-colors duration-300"
-                    >
-                      <Twitter className="h-4 w-4 text-white" />
-                    </a> */}
+                  )}
+                  {member.social.email && (
                     <a
                       href={`mailto:${member.social.email}`}
-                      className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-red-500 transition-colors duration-300"
+                      className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white hover:bg-white hover:text-red-500 hover:border-white transition-all duration-300 shadow-lg hover:shadow-red-500/20 hover:-translate-y-1"
                     >
-                      <Mail className="h-4 w-4 text-white" />
+                      <Mail size={20} />
                     </a>
-                  </div>
+                  )}
                 </div>
               </div>
 
               {/* Member Info */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
-                  {member.name}
-                </h3>
-
-                {/* <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
-                  {member.role}
-                </div> */}
-
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <div className="p-6 flex flex-col flex-grow border-t border-white/5 bg-gradient-to-b from-transparent to-black/20">
+                <div className="mb-1">
+                  <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm font-medium text-blue-200/80 mb-3">
+                    {member.role}
+                  </p>
+                </div>
+                <p className="text-gray-400 text-sm leading-relaxed line-clamp-4">
                   {member.bio}
                 </p>
-
-                {/* Skills */}
-                {/* <div className="flex flex-wrap gap-2">
-                  {member.skills.map((skill, index) => (
-                    <span
-                      key={index}
-                      className="bg-gray-700/50 text-gray-300 text-xs px-2 py-1 rounded border border-gray-600"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div> */}
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Team Stats */}
+        {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl p-8 border border-blue-500/20"
+          className="mt-20 text-center"
         >
-          <h3 className="text-3xl font-bold text-center mb-8">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Team Excellence
-            </span>
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-                50+
-              </div>
-              <div className="text-gray-400">Combined Years Experience</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-                15+
-              </div>
-              <div className="text-gray-400">Certifications</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-                100%
-              </div>
-              <div className="text-gray-400">Dedication</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-                24/7
-              </div>
-              <div className="text-gray-400">Availability</div>
-            </div>
-          </div>
+          <p className="text-gray-500 text-sm uppercase tracking-widest mb-4">Join the team</p>
+          <a href="mailto:careers@deepnix.com" className="text-2xl font-bold text-white hover:text-blue-400 underline decoration-blue-500/50 hover:decoration-blue-500 transition-all">
+            We are always hiring talented people.
+          </a>
         </motion.div>
+
       </div>
     </section>
   );
