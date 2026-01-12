@@ -83,26 +83,32 @@ const Home: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-5"
           >
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('contact')}
-              className="group bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 shadow-lg shadow-blue-500/30 flex items-center justify-center space-x-2"
+              className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 rounded-xl font-bold text-white shadow-lg shadow-blue-500/30 overflow-hidden"
             >
-              <span>Hire Us</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out skew-y-12" />
+              <span className="relative flex items-center gap-2">
+                Hire Us
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
             </motion.button>
 
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('contact')}
-              className="group border-2 border-gray-700 hover:border-blue-500 text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:bg-blue-500/10 flex items-center justify-center space-x-2"
+              className="group relative px-8 py-4 rounded-xl font-bold text-white overflow-hidden border border-white/10 backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-colors duration-300"
             >
-              <span>Let's Talk</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative flex items-center gap-2">
+                Let's Talk
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
             </motion.button>
           </motion.div>
         </motion.div>
