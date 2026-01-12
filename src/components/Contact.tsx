@@ -57,22 +57,22 @@ const Contact: React.FC = () => {
 
     try {
       await emailjs.send(
-        'service_2dxhvbq',
-        'template_zcayn0h',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
-          name: formData.name,
-          email: formData.email,
-          company: formData.company,
+          from_name: formData.name,
+          from_email: formData.email,
+          from_phone: formData.company,
           subject: formData.subject,
           message: formData.message,
         },
-        '6tkcZrRwRKxVbRzMW'
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', company: '', subject: '', message: '' });
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('Email Error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

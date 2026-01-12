@@ -1,41 +1,48 @@
-# DeepNix Website
+# DeepNix - Innovation Showcase
 
-A modern, responsive website for DeepNix built with React, TypeScript, Vite, and Tailwind CSS.
+DeepNix is a premium, high-performance website designed with a minimalist dark-themed glassmorphism aesthetic. Built using React, TypeScript, and Tailwind CSS, it features advanced animations and a seamless user experience across all devices.
 
-## 🚀 Features
+![Main View](https://grainy-gradients.vercel.app/noise.svg)
 
-- **Single Page Layout**: Smooth navigation between sections.
-- **Sections**:
-  - **Home**: Hero section with background animation.
-  - **About**: Information about the company/team.
-  - **Services**: Services offered by DeepNix.
-  - **Portfolio**: Showcase of projects.
-  - **Team**: Introduction to team members.
-  - **Contact**: Contact form and information (integrated with EmailJS).
-- **Responsive Design**: Fully responsive layout using Tailwind CSS.
-- **Animation**: Background animations and potential scroll effects.
+## ✨ Core Features
 
-## 🛠️ Technologies Used
+- **Standardized Glassmorphism Design**: High-end UI with semi-transparent backgrounds, blur effects, and subtle gradients.
+- **Micro-Animations**: Leverages Framer Motion for smooth, high-fidelity entry and scroll-triggered animations.
+- **Full Responsiveness**: Optimized for Desktop, Tablet, and Mobile views with custom grid layouts and font sizing.
+- **Component-Driven Architecture**:
+  - **Dynamic Hero Section**: High-impact introduction with an animated logo.
+  - **Interactive Showcase**: Portfolio section with 3D tilt-style effects.
+  - **Themed Business Solutions**: About, Services, Team, and detailed Contact sections.
+- **Standalone Legal Pages**: Dedicated routes for Privacy Policy and Terms of Service with automatic scroll-to-top.
+- **Integrated Communication**:
+  - **Smart Contact Form**: Frontend-only email submission powered by EmailJS.
+  - **Floating WhatsApp Button**: Personalized quick-contact icon.
 
-- **[React](https://reactjs.org/)**: JavaScript library for building user interfaces.
-- **[TypeScript](https://www.typescriptlang.org/)**: Typed superset of JavaScript.
-- **[Vite](https://vitejs.dev/)**: Next Generation Frontend Tooling.
-- **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework.
-- **[Lucide React](https://lucide.dev/)**: Icon library.
-- **[React Router](https://reactrouter.com/)**: Declarative routing for React.
-- **[EmailJS](https://www.emailjs.com/)**: Send email directly from JavaScript (used in Contact form).
+## 🛠️ Technology Stack
 
-## ⚙️ Prerequisites
+- **React 18**: Frontend library for building the UI.
+- **TypeScript**: Ensuring robust, type-safe development.
+- **Tailwind CSS**: Utility-first styling for precise glassmorphism control.
+- **Framer Motion**: Advanced physics-based animations.
+- **React Router Dom**: Client-side routing for multipage experience.
+- **Lucide React**: Clean and modern icon system.
+- **EmailJS**: Direct email integration without a traditional backend.
 
-- Node.js (v18 or higher recommended)
-- npm (Node Package Manager)
+---
 
-## 📦 Installation
+## 🚀 Getting Started
 
-1. **Clone the repository** (if applicable):
+### Prerequisites
+
+- **Node.js**: v18.0.0 or higher
+- **npm**: v9.0.0 or higher
+
+### Installation
+
+1. **Clone the repository**:
    ```bash
    git clone <repository-url>
-   cd deepnix-website
+   cd DeepNix
    ```
 
 2. **Install dependencies**:
@@ -43,69 +50,72 @@ A modern, responsive website for DeepNix built with React, TypeScript, Vite, and
    npm install
    ```
 
-## 🚀 Usage
+3. **Configure Environment Variables**:
+   Copy the sample file and fill in your credentials:
+   ```bash
+   cp .env.sample .env
+   ```
 
-### Development Server
-Start the development server with HMR (Hot Module Replacement):
+### Running Locally
+
 ```bash
+# Start development server
 npm run dev
-```
-Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Production Build
-Build the application for production:
-```bash
+# Build for production
 npm run build
-```
-The output will be in the `dist` folder.
 
-### Preview Production Build
-Preview the production build locally:
-```bash
+# Preview production build
 npm run preview
 ```
 
-## 📜 Scripts
+---
 
-- `npm run dev`: Starts the development server.
-- `npm run build`: Builds the app for production.
-- `npm run lint`: Runs ESLint to check for code quality issues.
-- `npm run preview`: Previews the built app.
-- `npm run deploy`: Deploys the application to GitHub Pages (uses `gh-pages`).
+## 📧 Email Service Setup (EmailJS)
 
-## 🚀 Deployment
+DeepNix uses a pure frontend solution for email submissions. To enable the contact form:
 
-This project is configured for deployment to GitHub Pages.
+1.  **Account**: Sign up at [EmailJS](https://www.emailjs.com/).
+2.  **Service**: Connect your Gmail service (`deepnixcompany@gmail.com`).
+3.  **Template**: Create a new email template.
+    - Set the subject to: `New Contact from {{from_name}} - {{subject}}`
+    - Use the branded HTML template (found in `docs/email_template.html` or from past implementation docs).
+4.  **Environment Variables**: Add your `SERVICE_ID`, `TEMPLATE_ID`, and `PUBLIC_KEY` to your `.env` file:
+    ```env
+    VITE_EMAILJS_SERVICE_ID=your_service_id
+    VITE_EMAILJS_TEMPLATE_ID=your_template_id
+    VITE_EMAILJS_PUBLIC_KEY=your_public_key
+    ```
 
-1. **Build the project**:
-   ```bash
-   npm run build
-   ```
-
-2. **Deploy**:
-   ```bash
-   npm run deploy
-   ```
-   This script runs `npm run build` internally before deploying to the `gh-pages` branch.
+---
 
 ## 📂 Project Structure
 
-```
-deepnix-website/
-├── public/              # Static assets
+```text
+DeepNix/
+├── public/              # Static assets and icons
 ├── src/
-│   ├── assets/          # Project assets (images, etc.)
-│   ├── components/      # React components (Home, About, Contact, etc.)
-│   ├── App.tsx          # Main Application component
-│   ├── main.tsx         # Entry point
-│   └── index.css        # Global styles (Tailwind imports)
-├── index.html           # HTML template
-├── package.json         # Project dependencies and scripts
-├── tailwind.config.js   # Tailwind CSS configuration
-├── tsconfig.json        # TypeScript configuration
-└── vite.config.ts       # Vite configuration
+│   ├── assets/          # Project images and logo files
+│   ├── components/      # Modular React sections (Home, About, etc.)
+│   ├── App.tsx          # Main application wrapper and routes
+│   ├── main.tsx         # Framework entry point
+│   └── index.css        # Global CSS and Tailwind directives
+├── .env.sample          # Environment configuration template
+├── tailwind.config.js   # Custom theme and glassmorphism utility
+└── vite.config.ts       # Build and plugin configuration
 ```
+
+---
+
+## 🚢 Deployment
+
+The project is optimized for static hosting providers like **Vercel**, **Netlify**, or **GitHub Pages**.
+
+1.  Ensure all environment variables are added to your hosting provider's dashboard.
+2.  Point the build command to `npm run build` and the output directory to `dist`.
+
+---
 
 ## 📄 License
 
-This project is private and proprietary.
+This project is proprietary. All rights reserved by **DeepNix**.

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import BackgroundAnimation from './BackgroundAnimation';
 import Footer from './Footer';
+import WhatsAppButton from './WhatsAppButton';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -20,9 +21,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Footer */}
       <Footer />
+
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
     </div>
   );
 };
 
 export default Layout;
-
