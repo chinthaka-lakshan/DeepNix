@@ -165,7 +165,7 @@ const Services: React.FC = () => {
                 key={index}
                 variants={cardVariants}
                 whileHover={{ y: -10 }}
-                className={`group relative h-full bg-gray-900/40 backdrop-blur-xl border border-white/5 rounded-3xl p-8 overflow-hidden transition-all duration-500 hover:border-white/10 ${service.shadow}`}
+                className={`group relative h-full bg-white/5 backdrop-blur-xl border border-white/5 rounded-3xl p-8 overflow-hidden transition-all duration-500 hover:border-white/10 ${service.shadow}`}
               >
                 {/* Hover Gradient Background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
@@ -222,7 +222,7 @@ const Services: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden bg-gray-900/40 backdrop-blur-xl border border-white/5 p-8 md:p-12"
+          className="relative rounded-3xl overflow-hidden bg-white/5 backdrop-blur-xl border border-white/5 p-8 md:p-12"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 opacity-50" />
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light" />
@@ -272,7 +272,7 @@ const Services: React.FC = () => {
                 <motion.div
                   key={index}
                   whileHover={{ y: -5 }}
-                  className="group bg-gray-800/40 backdrop-blur-md rounded-2xl p-6 border border-white/5 hover:border-white/10 transition-all duration-300"
+                  className="group bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/5 hover:border-white/10 transition-all duration-300"
                 >
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.gradient} p-2.5 mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <Icon className="w-full h-full text-white" />

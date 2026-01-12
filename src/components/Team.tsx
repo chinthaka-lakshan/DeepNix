@@ -148,7 +148,7 @@ const Team: React.FC = () => {
   };
 
   return (
-    <section id="team" className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 bg-black/20">
+    <section id="team" className="min-h-screen py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <motion.div
@@ -184,10 +184,10 @@ const Team: React.FC = () => {
               key={member.id}
               variants={cardVariants}
               whileHover={{ y: -8 }}
-              className="group bg-gray-900/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/5 hover:border-blue-500/30 transition-all duration-300 flex flex-col h-full"
+              className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/5 hover:border-blue-500/30 transition-all duration-300 flex flex-col h-full"
             >
               {/* Member Image Area */}
-              <div className="relative aspect-[4/5] overflow-hidden bg-gray-800">
+              <div className="relative aspect-[4/5] overflow-hidden bg-white/5">
                 <motion.img
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.5 }}
@@ -197,7 +197,7 @@ const Team: React.FC = () => {
                 />
 
                 {/* Floating Socials */}
-                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-gray-900/90 to-transparent flex justify-center gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#0a0f1c]/90 to-transparent flex justify-center gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   {member.social.linkedin && member.social.linkedin !== '#' && (
                     <a
                       href={member.social.linkedin}

@@ -82,7 +82,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <section id="about" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="about" className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-64 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
@@ -123,7 +123,7 @@ const About: React.FC = () => {
           {/* Decorative Glow */}
           <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition duration-1000" />
 
-          <div className="relative rounded-[2rem] bg-gray-900/60 backdrop-blur-xl border border-white/10 p-8 md:p-14 overflow-hidden shadow-2xl">
+          <div className="relative rounded-[2rem] bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-14 overflow-hidden shadow-2xl">
             {/* Noise Texture */}
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light" />
 
@@ -200,7 +200,7 @@ const About: React.FC = () => {
                   key={index}
                   variants={itemVariants}
                   whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                  className="group relative p-8 rounded-2xl bg-gray-900/40 backdrop-blur-sm border border-gray-800/50 hover:border-blue-500/30 transition-all duration-500 overflow-hidden"
+                  className="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/5 hover:border-blue-500/30 transition-all duration-500 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

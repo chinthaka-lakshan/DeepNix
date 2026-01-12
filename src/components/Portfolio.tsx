@@ -106,7 +106,7 @@ const Portfolio: React.FC = () => {
   ];
 
   return (
-    <section id="portfolio" className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-black/40">
+    <section id="portfolio" className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Dynamic Background */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px]" />
@@ -166,14 +166,14 @@ const Portfolio: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`group relative rounded-[2rem] overflow-hidden bg-gray-900 border border-white/5 ${project.size === 'large' ? 'lg:col-span-2' : ''}`}
+              className={`group relative rounded-[2rem] overflow-hidden bg-white/5 border border-white/5 ${project.size === 'large' ? 'lg:col-span-2' : ''}`}
             >
               {/* Background Image with Zoom Effect */}
               <div className="absolute inset-0 w-full h-full">
                 {/* Special background for logo-type images */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} transition-opacity duration-500 ${project.isLogo ? 'opacity-10 group-hover:opacity-20' : 'opacity-0'}`} />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent z-10 opacity-90 transition-opacity duration-500 group-hover:opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1c] via-[#0a0f1c]/40 to-transparent z-10 opacity-90 transition-opacity duration-500 group-hover:opacity-60" />
 
                 <img
                   src={project.image}
