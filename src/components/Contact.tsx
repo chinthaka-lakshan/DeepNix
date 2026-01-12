@@ -105,7 +105,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="contact" className="min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px]" />
@@ -119,22 +119,22 @@ const Contact: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 md:mb-20"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
             <Mail size={14} className="text-blue-400" />
             <span className="text-xs font-medium text-blue-300 tracking-wide uppercase">Contact Us</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tight">
             Let's Start a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Conversation.</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
             Ready to transform your business? Let's discuss your project and explore
             how we can help you achieve your digital goals.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
 
           {/* Contact Form */}
           <motion.div
@@ -142,11 +142,11 @@ const Contact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-10 border border-white/5 shadow-2xl relative overflow-hidden group flex flex-col justify-center"
+            className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-10 border border-white/5 shadow-2xl relative overflow-hidden group flex flex-col justify-center"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-            <h3 className="text-2xl font-bold text-white mb-8">Send Us a Message</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8">Send Us a Message</h3>
 
             {submitStatus === 'success' && (
               <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-8 flex items-center gap-3">
@@ -299,12 +299,12 @@ const Contact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="flex flex-col gap-5 h-full"
+            className="flex flex-col gap-5"
           >
             {/* Email Card */}
             <motion.div
               whileHover={{ y: -5, borderColor: 'rgba(59, 130, 246, 0.4)' }}
-              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/5 shadow-xl relative overflow-hidden group flex-1 flex flex-col justify-center transition-colors duration-300"
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/5 shadow-xl relative overflow-hidden group lg:flex-1 flex flex-col lg:justify-center transition-colors duration-300"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-500/20 transition-all duration-500" />
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -315,7 +315,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-gray-400 mb-1 uppercase tracking-widest group-hover:text-blue-400 transition-colors">Email Address</h4>
-                  <a href="mailto:deepnixcompany@gmail.com" className="text-xl text-white font-semibold hover:text-blue-300 transition-colors break-all">
+                  <a href="mailto:deepnixcompany@gmail.com" className="text-base sm:text-lg md:text-xl text-white font-semibold hover:text-blue-300 transition-colors break-all">
                     deepnixcompany@gmail.com
                   </a>
                 </div>
@@ -325,7 +325,7 @@ const Contact: React.FC = () => {
             {/* Phone Card */}
             <motion.div
               whileHover={{ y: -5, borderColor: 'rgba(168, 85, 247, 0.4)' }}
-              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/5 shadow-xl relative overflow-hidden group flex-1 flex flex-col justify-center transition-colors duration-300"
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/5 shadow-xl relative overflow-hidden group lg:flex-1 flex flex-col lg:justify-center transition-colors duration-300"
             >
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-[40px] translate-y-1/2 -translate-x-1/2 group-hover:bg-purple-500/20 transition-all duration-500" />
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -337,7 +337,7 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="text-sm font-bold text-gray-400 mb-1 uppercase tracking-widest group-hover:text-purple-400 transition-colors">Phone Number</h4>
                   <div className="flex flex-col gap-1">
-                    <a href="tel:+94710551392" className="text-xl text-white font-semibold hover:text-purple-300 transition-colors">+94 71 055 1392</a>
+                    <a href="tel:+94710551392" className="text-base sm:text-lg md:text-xl text-white font-semibold hover:text-purple-300 transition-colors">+94 71 055 1392</a>
                     <a href="tel:+94762690015" className="text-lg text-gray-300 font-medium hover:text-purple-300 transition-colors">+94 76 269 0015</a>
                   </div>
                 </div>
@@ -347,7 +347,7 @@ const Contact: React.FC = () => {
             {/* Business Hours Card */}
             <motion.div
               whileHover={{ y: -5, borderColor: 'rgba(6, 182, 212, 0.4)' }}
-              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/5 shadow-xl relative overflow-hidden group flex-1 flex flex-col justify-center transition-colors duration-300"
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/5 shadow-xl relative overflow-hidden group lg:flex-1 flex flex-col lg:justify-center transition-colors duration-300"
             >
               <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-cyan-500/10 rounded-full blur-[50px] -translate-x-1/2 -translate-y-1/2" />
               <div className="flex flex-col w-full relative z-10">

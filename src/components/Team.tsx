@@ -148,7 +148,7 @@ const Team: React.FC = () => {
   };
 
   return (
-    <section id="team" className="min-h-screen py-24 px-4 sm:px-6 lg:px-8">
+    <section id="team" className="min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <motion.div
@@ -260,25 +260,25 @@ const Team: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 rounded-3xl blur-2xl opacity-50" />
 
             {/* Main Card */}
-            <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-12 overflow-hidden">
+            <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 md:p-12 overflow-hidden">
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
               {/* Content */}
-              <div className="relative z-10 text-center space-y-6">
+              <div className="relative z-10 text-center space-y-4 sm:space-y-6">
                 <div className="inline-block px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full">
-                  <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider">Join Our Team</p>
+                  <p className="text-blue-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">Join Our Team</p>
                 </div>
 
-                <h3 className="text-3xl md:text-4xl font-bold text-white">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
                   We're Always Looking for
-                  <span className="block mt-2 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                     Talented People
                   </span>
                 </h3>
 
-                <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-4 sm:px-0">
                   Join a team of passionate innovators and help us shape the future of digital excellence.
                 </p>
 
@@ -286,10 +286,10 @@ const Team: React.FC = () => {
                   href="mailto:deepnixcompany@gmail.com"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 rounded-xl font-bold text-white shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300"
+                  className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 rounded-xl font-bold text-white shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 text-sm sm:text-base"
                 >
                   <span>Get in Touch</span>
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </motion.a>
