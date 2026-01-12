@@ -8,6 +8,7 @@ import Team from './components/Team';
 import Contact from './components/Contact';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
+import ScrollToTop from './components/ScrollToTop';
 
 import SEO from './components/SEO';
 
@@ -27,6 +28,7 @@ const MainPage = () => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<MainPage />} />
