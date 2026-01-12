@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { ArrowUpRight, Code2, ExternalLink, Layers, Sparkles } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { ArrowUpRight, ExternalLink, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Atharaman from '../assets/atharaman.png';
 import ymproducts from '../assets/ymproducts.png';
 import CyberMall from '../assets/CyberMall.png';
@@ -99,7 +99,7 @@ const Portfolio: React.FC = () => {
       image: Wetez,
       technologies: ['React.js', 'Node.js', 'MySQL'],
       gradient: 'from-indigo-500 to-blue-500',
-      gradient: 'from-indigo-500 to-blue-500',
+
       size: 'large', // Spans 2 columns at bottom
       isLogo: true
     },
