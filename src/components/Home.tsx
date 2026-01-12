@@ -30,7 +30,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Side - Company Description and Buttons */}
         <motion.div
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
           initial="hidden"
           animate="visible"
         >
-          <div className="space-y-6">
+          <div className="space-y-6 text-center lg:text-left">
             <motion.h1
               variants={itemVariants}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
 
             <motion.p
               variants={itemVariants}
-              className="text-xl text-gray-300 leading-relaxed max-w-2xl"
+              className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
               We are a cutting-edge technology company specializing in transformative digital solutions.
               At DEEPNIX, we blend creativity with technical expertise to deliver exceptional UI/UX design,
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap items-center gap-4 text-gray-400"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-gray-400"
             >
               <div className="flex items-center space-x-2">
                 <Zap className="h-5 w-5 text-blue-400" />
@@ -83,7 +83,7 @@ const Home: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-5"
+            className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start"
           >
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" }}

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import { Mail, Phone, Send, Facebook, Youtube, ChevronDown } from 'lucide-react';
+import { Mail, Phone, Send, Facebook, Youtube, ChevronDown, Clock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Contact: React.FC = () => {
@@ -105,7 +105,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 bg-black/40 relative overflow-hidden">
+    <section id="contact" className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px]" />
@@ -142,7 +142,7 @@ const Contact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-gray-900/40 backdrop-blur-xl rounded-3xl p-8 md:p-10 border border-white/5 shadow-2xl relative overflow-hidden group flex flex-col justify-center"
+            className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-10 border border-white/5 shadow-2xl relative overflow-hidden group flex flex-col justify-center"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
@@ -299,68 +299,81 @@ const Contact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-
-            className="bg-gray-900/40 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-white/5 shadow-2xl relative overflow-hidden flex flex-col justify-between space-y-6"
+            className="flex flex-col gap-5 h-full"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-[60px] translate-y-1/2 -translate-x-1/2" />
+            {/* Email Card */}
+            <motion.div
+              whileHover={{ y: -5, borderColor: 'rgba(59, 130, 246, 0.4)' }}
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/5 shadow-xl relative overflow-hidden group flex-1 flex flex-col justify-center transition-colors duration-300"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-500/20 transition-all duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-            {/* Contact Information */}
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                Contact Information
-              </h3>
-              <div className="space-y-5">
-                <div className="flex items-start gap-4">
-                  <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                    <Mail className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-medium text-gray-400 mb-0.5 uppercase tracking-wider">Email Address</h4>
-                    <a href="mailto:deepnixcompany@gmail.com" className="text-lg text-white font-medium hover:text-blue-400 transition-colors">
-                      deepnixcompany@gmail.com
-                    </a>
-                  </div>
+              <div className="flex items-center gap-6 relative z-10">
+                <div className="p-4 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-600/10 text-blue-400 border border-blue-500/20 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Mail className="h-8 w-8" />
                 </div>
+                <div>
+                  <h4 className="text-sm font-bold text-gray-400 mb-1 uppercase tracking-widest group-hover:text-blue-400 transition-colors">Email Address</h4>
+                  <a href="mailto:deepnixcompany@gmail.com" className="text-xl text-white font-semibold hover:text-blue-300 transition-colors break-all">
+                    deepnixcompany@gmail.com
+                  </a>
+                </div>
+              </div>
+            </motion.div>
 
-                <div className="flex items-start gap-4">
-                  <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
-                    <Phone className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-medium text-gray-400 mb-0.5 uppercase tracking-wider">Phone Number</h4>
-                    <div className="flex flex-col gap-0.5">
-                      <a href="tel:+94710551392" className="text-lg text-white font-medium hover:text-purple-400 transition-colors">+94 71 055 1392</a>
-                      <a href="tel:+94762690015" className="text-lg text-white font-medium hover:text-purple-400 transition-colors">+94 76 269 0015</a>
-                    </div>
+            {/* Phone Card */}
+            <motion.div
+              whileHover={{ y: -5, borderColor: 'rgba(168, 85, 247, 0.4)' }}
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/5 shadow-xl relative overflow-hidden group flex-1 flex flex-col justify-center transition-colors duration-300"
+            >
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-[40px] translate-y-1/2 -translate-x-1/2 group-hover:bg-purple-500/20 transition-all duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="flex items-center gap-6 relative z-10">
+                <div className="p-4 rounded-2xl bg-gradient-to-br from-purple-500/20 to-purple-600/10 text-purple-400 border border-purple-500/20 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Phone className="h-8 w-8" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-gray-400 mb-1 uppercase tracking-widest group-hover:text-purple-400 transition-colors">Phone Number</h4>
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+94710551392" className="text-xl text-white font-semibold hover:text-purple-300 transition-colors">+94 71 055 1392</a>
+                    <a href="tel:+94762690015" className="text-lg text-gray-300 font-medium hover:text-purple-300 transition-colors">+94 76 269 0015</a>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Divider */}
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-
-
-            {/* Business Hours */}
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Business Hours</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center pb-3 border-b border-white/5">
-                  <span className="text-gray-400 font-medium">Monday - Friday</span>
-                  <span className="text-white font-semibold">9:00 AM - 6:00 PM</span>
+            {/* Business Hours Card */}
+            <motion.div
+              whileHover={{ y: -5, borderColor: 'rgba(6, 182, 212, 0.4)' }}
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/5 shadow-xl relative overflow-hidden group flex-1 flex flex-col justify-center transition-colors duration-300"
+            >
+              <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-cyan-500/10 rounded-full blur-[50px] -translate-x-1/2 -translate-y-1/2" />
+              <div className="flex flex-col w-full relative z-10">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 group-hover:bg-cyan-500/20 transition-colors duration-300">
+                    <Clock className="h-5 w-5" />
+                  </div>
+                  <h4 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Business Hours</h4>
                 </div>
-                <div className="flex justify-between items-center pb-3 border-b border-white/5">
-                  <span className="text-gray-400 font-medium">Saturday</span>
-                  <span className="text-white font-semibold">10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 font-medium">Sunday</span>
-                  <span className="text-red-400 font-medium px-3 py-1 rounded-full bg-red-400/10 border border-red-400/20 text-xs uppercase tracking-wide">Closed</span>
+
+                <div className="space-y-4 pl-2">
+                  <div className="flex justify-between items-center text-base border-b border-white/5 pb-2 group-hover:border-white/10 transition-colors">
+                    <span className="text-gray-400 font-medium group-hover:text-gray-300">Monday - Friday</span>
+                    <span className="text-white font-semibold">9:00 AM - 6:00 PM</span>
+                  </div>
+                  <div className="flex justify-between items-center text-base border-b border-white/5 pb-2 group-hover:border-white/10 transition-colors">
+                    <span className="text-gray-400 font-medium group-hover:text-gray-300">Saturday</span>
+                    <span className="text-white font-semibold">10:00 AM - 4:00 PM</span>
+                  </div>
+                  <div className="flex justify-between items-center text-base pt-1">
+                    <span className="text-gray-400 font-medium group-hover:text-gray-300">Sunday</span>
+                    <span className="text-red-400 font-bold px-3 py-1 rounded-md bg-red-400/10 text-xs border border-red-400/20 uppercase tracking-wide shadow-sm">Closed</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
