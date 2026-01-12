@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import { Mail, Phone, Send, Facebook, Youtube, ChevronDown, Clock } from 'lucide-react';
+import { Mail, Phone, Clock, ChevronDown, Send } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Contact: React.FC = () => {
@@ -79,30 +79,7 @@ const Contact: React.FC = () => {
     }
   };
 
-  const socialLinks = [
-    {
-      name: 'Facebook',
-      icon: Facebook,
-      url: 'https://facebook.com/deepnix',
-      color: 'hover:bg-[#1877F2] hover:text-white'
-    },
-    {
-      name: 'YouTube',
-      icon: Youtube,
-      url: 'https://youtube.com/deepnix',
-      color: 'hover:bg-[#FF0000] hover:text-white'
-    },
-    {
-      name: 'TikTok',
-      icon: ({ className }: { className?: string }) => (
-        <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-        </svg>
-      ),
-      url: 'https://tiktok.com/@deepnix',
-      color: 'hover:bg-black hover:text-white'
-    }
-  ];
+
 
   return (
     <section id="contact" className="min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -347,7 +324,7 @@ const Contact: React.FC = () => {
             {/* Business Hours Card */}
             <motion.div
               whileHover={{ y: -5, borderColor: 'rgba(6, 182, 212, 0.4)' }}
-              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/5 shadow-xl relative overflow-hidden group lg:flex-1 flex flex-col lg:justify-center transition-colors duration-300"
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 sm:p-8 lg:p-10 border border-white/5 shadow-xl relative overflow-hidden group lg:flex-1 flex flex-col lg:justify-center transition-colors duration-300"
             >
               <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-cyan-500/10 rounded-full blur-[50px] -translate-x-1/2 -translate-y-1/2" />
               <div className="flex flex-col w-full relative z-10">
