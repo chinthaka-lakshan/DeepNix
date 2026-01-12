@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import BackgroundAnimation from './BackgroundAnimation';
@@ -9,6 +9,29 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => item.id);
+
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -63,9 +86,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  whileHover={{ scale: 1.05, color: '#60A5FA' }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 transition-all duration-300"
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${activeSection === item.id
+                    ? 'bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-bold'
+                    : 'text-gray-300 hover:text-blue-400'
+                    }`}
                 >
                   {item.label}
                 </motion.button>
@@ -103,7 +129,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.3 }}
                     onClick={() => scrollToSection(item.id)}
-                    className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300"
+                    className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${activeSection === item.id
+                      ? 'text-white bg-blue-500/20 border-l-4 border-blue-500'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                      }`}
                   >
                     {item.label}
                   </motion.button>

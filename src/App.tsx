@@ -6,9 +6,12 @@ import Portfolio from './components/Portfolio';
 import Team from './components/Team';
 import Contact from './components/Contact';
 
+import SEO from './components/SEO';
+
 function App() {
   return (
     <Layout>
+      <SEO />
       <Home />
       <About />
       <Services />
