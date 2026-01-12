@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palette, Code, ShoppingCart, Smartphone, Bot, TrendingUp, ArrowRight } from 'lucide-react';
+import { Palette, Code, ShoppingCart, Smartphone, Bot, TrendingUp, ArrowRight, CheckCircle2, Cpu, Zap, Users, BarChart3, Layers } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Services: React.FC = () => {
@@ -222,53 +222,66 @@ const Services: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700 backdrop-blur-sm"
+          className="relative rounded-3xl overflow-hidden bg-gray-900/40 backdrop-blur-xl border border-white/5 p-8 md:p-12"
         >
-          <div className="text-center mb-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 opacity-50" />
+          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light" />
+
+          <div className="relative z-10 text-center mb-16">
             <h3 className="text-3xl font-bold mb-4">
+              <span className="text-white">Why Partner with </span>
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Why Partner with DEEPNIX?
+                DEEPNIX?
               </span>
             </h3>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
               We combine technical expertise with business understanding to deliver solutions
               that not only work perfectly but also drive real business results.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 title: 'Full-Service Expertise',
                 description: 'End-to-end solutions from design to AI integration',
-                icon: '🔧'
+                icon: Layers,
+                gradient: 'from-blue-500 to-cyan-500'
               },
               {
-                title: 'Future-Proof Technology',
+                title: 'Future-Proof Tech',
                 description: 'Cutting-edge solutions with long-term scalability',
-                icon: '🚀'
+                icon: Cpu,
+                gradient: 'from-purple-500 to-pink-500'
               },
               {
-                title: 'Proven Methodologies',
-                description: 'Agile development with measurable results',
-                icon: '📊'
+                title: 'Proven Results',
+                description: 'Agile development with measurable outcomes',
+                icon: BarChart3,
+                gradient: 'from-amber-500 to-orange-500'
               },
               {
-                title: 'Dedicated Partnership',
+                title: 'Dedicated Partner',
                 description: 'Long-term collaboration with continuous support',
-                icon: '🤝'
+                icon: Users,
+                gradient: 'from-emerald-500 to-green-500'
               }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05, backgroundColor: 'rgba(31, 41, 55, 0.8)' }}
-                className="bg-gray-800/30 rounded-xl p-6 transition-all duration-300"
-              >
-                <div className="text-3xl mb-4">{item.icon}</div>
-                <h4 className="text-white font-semibold mb-2">{item.title}</h4>
-                <p className="text-gray-400 text-sm">{item.description}</p>
-              </motion.div>
-            ))}
+            ].map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={index}
+                  whileHover={{ y: -5 }}
+                  className="group bg-gray-800/40 backdrop-blur-md rounded-2xl p-6 border border-white/5 hover:border-white/10 transition-all duration-300"
+                >
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.gradient} p-2.5 mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <Icon className="w-full h-full text-white" />
+                  </div>
+                  <h4 className="text-white font-bold text-lg mb-2 group-hover:text-blue-400 transition-colors duration-300">{item.title}</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </div>
