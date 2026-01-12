@@ -1,0 +1,49 @@
+
+> deepnix-website@0.0.0 build
+> vite build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 7 modules transformed.
+x Build failed in 831ms
+error during build:
+[vite:esbuild] Transform failed with 3 errors:
+D:/Projects/DeepNix/src/components/Home.tsx:59:10: ERROR: Unexpected closing "motion.div" tag does not match opening "div" tag
+D:/Projects/DeepNix/src/components/Home.tsx:98:6: ERROR: Unexpected closing "div" tag does not match opening "section" tag
+D:/Projects/DeepNix/src/components/Home.tsx:99:15: ERROR: Unterminated regular expression
+file: D:/Projects/DeepNix/src/components/Home.tsx:59:10
+
+Unexpected closing "motion.div" tag does not match opening "div" tag
+57 |              </div>
+58 |            </motion.div>
+59 |          </motion.div>
+   |            ^
+60 |  
+61 |          <motion.div
+
+Unexpected closing "div" tag does not match opening "section" tag
+96 |          <AnimatedLogo />
+97 |        </motion.div>
+98 |      </div>
+   |        ^
+99 |      </section >
+100|    );
+
+Unterminated regular expression
+97 |        </motion.div>
+98 |      </div>
+99 |      </section >
+   |                 ^
+100|    );
+101|  };
+
+    at failureErrorWithLog (D:\Projects\DeepNix\node_modules\esbuild\lib\main.js:1472:15)
+    at D:\Projects\DeepNix\node_modules\esbuild\lib\main.js:755:50
+    at responseCallbacks.<computed> (D:\Projects\DeepNix\node_modules\esbuild\lib\main.js:622:9)
+    at handleIncomingPacket (D:\Projects\DeepNix\node_modules\esbuild\lib\main.js:677:12)
+    at Socket.readFromStdout (D:\Projects\DeepNix\node_modules\esbuild\lib\main.js:600:7)
+    at Socket.emit (node:events:507:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Readable.push (node:internal/streams/readable:390:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)

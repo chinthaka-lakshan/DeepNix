@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Atharaman from '../assets/atharaman.png';
 import ymproducts from '../assets/ymproducts.png';
 import CyberMall from '../assets/CyberMall.png';
@@ -70,7 +71,7 @@ const Portfolio: React.FC = () => {
       description:
         'Travel Compass, a smart and user-friendly travel planning platform. Our goal is to help travelers easily plan trips based on their budget, while also giving hotels, guides, and vehicle rental services a space to connect with users. The most exciting part is Our platform uses AI to recommend the best travel packages based on each traveler’s needs.',
       image: travelcompass,
-      technologies: ['React.js', 'Spring Boot','Python', 'MySQL'],
+      technologies: ['React.js', 'Spring Boot', 'Python', 'MySQL'],
       gradient: 'from-orange-500 to-red-500',
     },
     {
@@ -80,17 +81,38 @@ const Portfolio: React.FC = () => {
       description:
         'VetEZ is a software application designed to streamline operations and enhance pet vaccination management within veterinary clinics. It aims to offer a user-friendly and comprehensive platform that simplifies administrative tasks, improves communication with pet owners, and ultimately contributes to better pet health outcomes.',
       image: Wetez,
-      technologies: ['React.js','HTML','CSS','Express.js','Node.js', 'MySQL'],
+      technologies: ['React.js', 'HTML', 'CSS', 'Express.js', 'Node.js', 'MySQL'],
       gradient: 'from-pink-500 to-rose-500',
     },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const projectVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+  };
 
   return (
     <section id="portfolio" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Our Portfolio
@@ -99,21 +121,31 @@ const Portfolio: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our latest projects and see how we transform ideas into powerful digital solutions.
           </p>
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+        >
           {projects.map((project) => (
-            <div
+            <motion.div
               key={project.id}
-              className="group bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-all duration-500 hover:scale-105"
+              variants={projectVariants}
+              whileHover={{ y: -10 }}
+              className="group bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-all duration-300 shadow-lg"
             >
               {/* Image */}
               <div className="relative overflow-hidden">
-                <img
+                <motion.img
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.5 }}
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-48 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               </div>
@@ -158,25 +190,33 @@ const Portfolio: React.FC = () => {
                   </a>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* CTA */}
-        <div className="text-center bg-gradient-to-r from-blue-500/10 to-cyan-500/10 p-12 rounded-2xl">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center bg-gradient-to-r from-blue-500/10 to-cyan-500/10 p-12 rounded-2xl"
+        >
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Start Your Project?
           </h3>
           <p className="text-gray-300 mb-8">
             Let’s build something amazing together.
           </p>
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('contact')}
-            className="bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-4 rounded-lg text-white hover:scale-105 transition"
+            className="bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-4 rounded-lg text-white font-medium transition"
           >
             Start Your Project
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
       </div>
     </section>

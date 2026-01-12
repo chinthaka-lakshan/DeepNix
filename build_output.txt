@@ -1,0 +1,28 @@
+
+> deepnix-website@0.0.0 build
+> vite build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 1911 modules transformed.
+x Build failed in 2.57s
+error during build:
+src/App.tsx (6:7): "default" is not exported by "src/components/Team.tsx", imported by "src/App.tsx".
+file: D:/Projects/DeepNix/src/App.tsx:6:7
+
+4: import Services from './components/Services';
+5: import Portfolio from './components/Portfolio';
+6: import Team from './components/Team';
+          ^
+7: import Contact from './components/Contact';
+
+    at getRollupError (file:///D:/Projects/DeepNix/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
+    at error (file:///D:/Projects/DeepNix/node_modules/rollup/dist/es/shared/parseAst.js:397:42)
+    at Module.error (file:///D:/Projects/DeepNix/node_modules/rollup/dist/es/shared/node-entry.js:17022:16)
+    at Module.traceVariable (file:///D:/Projects/DeepNix/node_modules/rollup/dist/es/shared/node-entry.js:17478:29)
+    at ModuleScope.findVariable (file:///D:/Projects/DeepNix/node_modules/rollup/dist/es/shared/node-entry.js:15141:39)
+    at FunctionScope.findVariable (file:///D:/Projects/DeepNix/node_modules/rollup/dist/es/shared/node-entry.js:5688:38)
+    at FunctionBodyScope.findVariable (file:///D:/Projects/DeepNix/node_modules/rollup/dist/es/shared/node-entry.js:5688:38)
+    at Identifier.bind (file:///D:/Projects/DeepNix/node_modules/rollup/dist/es/shared/node-entry.js:5462:40)
+    at CallExpression.bind (file:///D:/Projects/DeepNix/node_modules/rollup/dist/es/shared/node-entry.js:2825:28)
+    at CallExpression.bind (file:///D:/Projects/DeepNix/node_modules/rollup/dist/es/shared/node-entry.js:12172:15)

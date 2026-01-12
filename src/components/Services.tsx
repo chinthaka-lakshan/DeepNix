@@ -1,11 +1,12 @@
 import React from 'react';
 import { Palette, Code, ShoppingCart, Smartphone, Bot, TrendingUp, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Services: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ 
+      element.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -111,30 +112,59 @@ const Services: React.FC = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   return (
     <section id="services" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Our Services
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We offer comprehensive technology solutions designed to transform your business 
+            We offer comprehensive technology solutions designed to transform your business
             and accelerate your digital journey with cutting-edge expertise.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16"
+        >
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div
+              <motion.div
                 key={index}
-                className={`group bg-gradient-to-br ${service.bgGradient} rounded-2xl p-8 border ${service.borderGradient} hover:border-opacity-60 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl`}
+                variants={cardVariants}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                className={`group bg-gradient-to-br ${service.bgGradient} rounded-2xl p-8 border ${service.borderGradient} hover:border-opacity-60 transition-all duration-500 shadow-lg`}
               >
                 {/* Icon */}
                 <div className={`bg-gradient-to-r ${service.gradient} w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -169,13 +199,19 @@ const Services: React.FC = () => {
                   <span>Get Started</span>
                   <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </button>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Why Choose Us Section */}
-        <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700 backdrop-blur-sm">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700 backdrop-blur-sm"
+        >
           <div className="text-center mb-10">
             <h3 className="text-3xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -183,11 +219,11 @@ const Services: React.FC = () => {
               </span>
             </h3>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              We combine technical expertise with business understanding to deliver solutions 
+              We combine technical expertise with business understanding to deliver solutions
               that not only work perfectly but also drive real business results.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -211,17 +247,18 @@ const Services: React.FC = () => {
                 icon: '🤝'
               }
             ].map((item, index) => (
-              <div 
-                key={index} 
-                className="bg-gray-800/30 rounded-xl p-6 hover:bg-gray-800/50 transition-all duration-300 hover:scale-105"
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05, backgroundColor: 'rgba(31, 41, 55, 0.8)' }}
+                className="bg-gray-800/30 rounded-xl p-6 transition-all duration-300"
               >
                 <div className="text-3xl mb-4">{item.icon}</div>
                 <h4 className="text-white font-semibold mb-2">{item.title}</h4>
                 <p className="text-gray-400 text-sm">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
